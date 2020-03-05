@@ -543,13 +543,12 @@ body{
 	border-bottom: 1px solid silver;
 }
 #menu_mobile_hidden{
-	height: 100vh;
 	position: absolute;
 	z-index: 999;
 	background: #fff;
-	overflow-y: scroll;
 	padding-bottom: 20px;
 	display: none;
+	box-shadow: -3px 7px 20px 0px;
 }
 #menu_mobile_hidden a{
 	color: #000;
