@@ -339,9 +339,12 @@ body{
 		height: 377px;
 	}	
 }
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 768px){
 	.contents{
 		height: auto;
+	}
+	section {
+		margin-top: 50px;
 	}
 }
 .name{
@@ -541,14 +544,22 @@ body{
 }
 .header_mobile{
 	border-bottom: 1px solid silver;
+    position: fixed;
+    background: #fff;
+    z-index: 1000;
+	width: 100%;
+	height: 50px;
 }
 #menu_mobile_hidden{
-	position: absolute;
-	z-index: 999;
-	background: #fff;
-	padding-bottom: 20px;
-	display: none;
-	box-shadow: -3px 7px 20px 0px;
+	width: 100vw;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background: #fff;
+    padding-bottom: 20px;
+    display: none;
+    overflow: scroll;
+    top: 50px;
 }
 #menu_mobile_hidden a{
 	color: #000;

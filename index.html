@@ -1,1548 +1,1726 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>New York Times</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+
+<head>
+	<title>New York Times</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body>
-		<header>
-			<div class="container-fluid">
-				<div class="row header_pc hidden-sm hidden-xs">
-					<div class="col-md-12">
-						<div class="row">
-							<div class="col-md-4 menu_and_search">
-								<i class="fas fa-bars"></i>
-								<i class="fas fa-search"></i>
-							</div>
-							<div class="col-md-4 language">
-								<a class="active" href="#">english</a>
-								<a href="#">español</a>
-								<a href="#">中文</a>
-							</div>
-							<div class="col-md-4 account">
-								<button>subscribe now</button>
-								<button>Account <span class="glyphicon glyphicon-menu-down"></span></button>
-							</div>
-						</div>	
-						<div class="row" style="border-bottom: 1px solid silver; padding-bottom: 10px;">
-							<div class="col-md-4 date">
-								<span>Friday, July 5, 2019</span>
-							</div>
-							<div class="col-md-4 logo">
-								<a href="#"><img src="images/logo.svg" alt="logo"></a>
-							</div>
-							<div class="col-md-4 today_papers">
-								<a href="#">Today's Paper</a>
-							</div>
-						</div>	
-						<div class="row">
-							<div class="col-md-12 menu">
-								<ul class="list_menu">
-									<li><a href="#">World</a></li>
-									<li><a href="#">U.S</a></li>
-									<li><a href="#">Politics</a></li>
-									<li><a href="#">N.Y.</a></li>
-									<li><a href="#">Business</a></li>
-									<li><a href="#">Opinion</a></li>
-									<li><a href="#">Tech</a></li>
-									<li><a href="#">Science</a></li>
-									<li><a href="#">Health</a></li>
-									<li><a href="#">Sports</a></li>
-									<li><a href="#">Arts</a></li>
-									<li><a href="#">Books</a></li>
-									<li><a href="#">Style</a></li>
-									<li><a href="#">Food</a></li>
-									<li><a href="#">Travel</a></li>
-									<li><a href="#">Magazine</a></li>
-									<li><a href="#">T Magazine</a></li>
-									<li><a href="#">Real Estate</a></li>
-									<li><a href="#">Video</a></li>
-								</ul>
-							</div>
-						</div>				
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<header>
+		<div class="container-fluid">
+			<div class="row header_pc hidden-sm hidden-xs">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-4 menu_and_search">
+							<i class="fas fa-bars"></i>
+							<i class="fas fa-search"></i>
+						</div>
+						<div class="col-md-4 language">
+							<a class="active" href="#">english</a>
+							<a href="#">español</a>
+							<a href="#">中文</a>
+						</div>
+						<div class="col-md-4 account">
+							<button>subscribe now</button>
+							<button>Account <span class="glyphicon glyphicon-menu-down"></span></button>
+						</div>
 					</div>
-				</div>
-				<div class="row header_mobile visible-xs visible-sm">
-					<div class="col-md-12">
-						<button id="menu_mobile"><i class="fas fa-bars" id="bars"></i></button>
-						<a href="#"><img class="logo_mobile" src="images/logo.svg"></a>
-						<button id="account_mobile"><i class="fas fa-user" id="user"></i></button>
+					<div class="row" style="border-bottom: 1px solid silver; padding-bottom: 10px;">
+						<div class="col-md-4 date">
+							<span>Friday, July 5, 2019</span>
+						</div>
+						<div class="col-md-4 logo">
+							<a href="#"><img src="images/logo.svg" alt="logo"></a>
+						</div>
+						<div class="col-md-4 today_papers">
+							<a href="#">Today's Paper</a>
+						</div>
 					</div>
-				</div>
-				<div class="row " id="menu_mobile_hidden">
-					<div class="col-xs-12 search_mobile">
-						<input type="text" name="search" placeholder="SEARCH" id="search"><button>GO</button>
-					</div>
-					<div class="col-xs-12">
-						<div class="row contents_menu_mobile_hidden">
-							<div class="col-xs-12">
-								<span class="about_title">news</span>
-							</div>
-							<div class="col-xs-6">
-								<a href="#">Home Page</a>
-								<a href="#">World</a>
-								<a href="#">U.S.</a>
-								<a href="#">Politics</a>
-								<a href="#">Election 2020</a>
-								<a href="#">New York</a>
-								<a href="#">Business</a>	
-							</div>
-							<div class="col-xs-6">
-								<a href="#">Tech</a>
-								<a href="#">Science</a>
-								<a href="#">Sports</a>
-								<a href="#">Obituaries</a>
-								<a href="#">Today's Paper</a>
-								<a href="#">Corrections</a>	
-							</div>
-							<div class="col-xs-12">
-								<span class="about_title">opinion</span>
-							</div>
-							<div class="col-xs-6">
-								<a href="#">Today's Opinion</a>
-								<a href="#">Op-Ed Columnists</a>
-								<a href="#">Editorials</a>
-								<a href="#">Op-Ed Contributors</a>	
-							</div>
-							<div class="col-xs-6">
-								<a href="#">Letters</a>
-								<a href="#">Sunday Review</a>
-								<a href="#">Video: Opinion</a>	
-							</div>
-							<div class="col-xs-12">
-								<span class="about_title">arts</span>
-							</div>
-							<div class="col-xs-6">
-								<a href="#">Today's Arts</a>
-								<a href="#">Art & Design</a>
-								<a href="#">Books</a>
-								<a href="#">Dance</a>
-								<a href="#">Movies</a>	
-							</div>
-							<div class="col-xs-6">
-								<a href="#">Music</a>
-								<a href="#">Pop Culture</a>
-								<a href="#">Television</a>
-								<a href="#">Theater</a>
-								<a href="#">Video: Arts</a>	
-							</div>
-							<div class="col-xs-12">
-								<span class="about_title">living</span>
-							</div>
-							<div class="col-xs-6">
-								<a href="#">Automobiles</a>
-								<a href="#">Crossword</a>
-								<a href="#">Education</a>
-								<a href="#">Food</a>
-								<a href="#">Health</a>
-								<a href="#">Jobs</a>
-								<a href="#">Magazine</a>	
-							</div>
-							<div class="col-xs-6">
-								<a href="#">Parenting</a>
-								<a href="#">Real Estate</a>
-								<a href="#">Style</a>
-								<a href="#">T Magazine</a>
-								<a href="#">Travel</a>
-								<a href="#">Love</a>	
-							</div>
-							<div class="col-xs-12">
-								<span class="about_title">listings & more</span>
-							</div>
-							<div class="col-xs-6">
-								<a href="#">Reader Center</a>
-								<a href="#">Wirecutter</a>
-								<a href="#">Live Events</a>
-								<a href="#">The Learning Network</a>
-								<a href="#">Tools & Services</a>
-								<a href="#">N.Y.C. Events Guide</a>
-								<a href="#">Multimedia</a>	
-							</div>
-							<div class="col-xs-6">
-								<a href="#">Potography</a>
-								<a href="#">Video</a>
-								<a href="#">Newsletters</a>
-								<a href="#">NYT Store</a>
-								<a href="#">Times Journeys</a>
-								<a href="#">Manage My Account</a>	
-							</div>	
+					<div class="row">
+						<div class="col-md-12 menu">
+							<ul class="list_menu">
+								<li><a href="#">World</a></li>
+								<li><a href="#">U.S</a></li>
+								<li><a href="#">Politics</a></li>
+								<li><a href="#">N.Y.</a></li>
+								<li><a href="#">Business</a></li>
+								<li><a href="#">Opinion</a></li>
+								<li><a href="#">Tech</a></li>
+								<li><a href="#">Science</a></li>
+								<li><a href="#">Health</a></li>
+								<li><a href="#">Sports</a></li>
+								<li><a href="#">Arts</a></li>
+								<li><a href="#">Books</a></li>
+								<li><a href="#">Style</a></li>
+								<li><a href="#">Food</a></li>
+								<li><a href="#">Travel</a></li>
+								<li><a href="#">Magazine</a></li>
+								<li><a href="#">T Magazine</a></li>
+								<li><a href="#">Real Estate</a></li>
+								<li><a href="#">Video</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-		</header>
-		<section>
-			<div class="container-fluid section">
-				<div class="row newest">
-					<div class="col-md-3 col-sm-4 hidden-xs newest_content_1">
-						<img class="img-responsive" src="images/1.jpg" alt="">
-						<div>
-							<a href="#"><h4>The 'Climate Fwd:' Newletter</h4></a>
-							<p>One thing you can do: Beat the heat efficiently.</p>
+			<div class="row header_mobile visible-xs visible-sm">
+				<div class="col-md-12">
+					<button id="menu_mobile"><i class="fas fa-bars" id="bars"></i></button>
+					<a href="#"><img class="logo_mobile" src="images/logo.svg"></a>
+					<button id="account_mobile"><i class="fas fa-user" id="user"></i></button>
+				</div>
+				<div class="col-md-12">
+					<div class="row " id="menu_mobile_hidden">
+						<div class="col-xs-12 search_mobile">
+							<input type="text" name="search" placeholder="SEARCH" id="search"><button>GO</button>
 						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 hidden-xs newest_content_2">
-						<img class="img-responsive" src="images/2.jpg" alt="">
-						<div>
-							<a href="#"><h4>The Book Review Podcast</h4></a>
-							<p>Taffy Brodesser-Akner talks about her best-selling debut novel.</p>
+						<div class="col-xs-12">
+							<div class="row contents_menu_mobile_hidden">
+								<div class="col-xs-12">
+									<span class="about_title">news</span>
+								</div>
+								<div class="col-xs-6">
+									<a href="#">Home Page</a>
+									<a href="#">World</a>
+									<a href="#">U.S.</a>
+									<a href="#">Politics</a>
+									<a href="#">Election 2020</a>
+									<a href="#">New York</a>
+									<a href="#">Business</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="#">Tech</a>
+									<a href="#">Science</a>
+									<a href="#">Sports</a>
+									<a href="#">Obituaries</a>
+									<a href="#">Today's Paper</a>
+									<a href="#">Corrections</a>
+								</div>
+								<div class="col-xs-12">
+									<span class="about_title">opinion</span>
+								</div>
+								<div class="col-xs-6">
+									<a href="#">Today's Opinion</a>
+									<a href="#">Op-Ed Columnists</a>
+									<a href="#">Editorials</a>
+									<a href="#">Op-Ed Contributors</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="#">Letters</a>
+									<a href="#">Sunday Review</a>
+									<a href="#">Video: Opinion</a>
+								</div>
+								<div class="col-xs-12">
+									<span class="about_title">arts</span>
+								</div>
+								<div class="col-xs-6">
+									<a href="#">Today's Arts</a>
+									<a href="#">Art & Design</a>
+									<a href="#">Books</a>
+									<a href="#">Dance</a>
+									<a href="#">Movies</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="#">Music</a>
+									<a href="#">Pop Culture</a>
+									<a href="#">Television</a>
+									<a href="#">Theater</a>
+									<a href="#">Video: Arts</a>
+								</div>
+								<div class="col-xs-12">
+									<span class="about_title">living</span>
+								</div>
+								<div class="col-xs-6">
+									<a href="#">Automobiles</a>
+									<a href="#">Crossword</a>
+									<a href="#">Education</a>
+									<a href="#">Food</a>
+									<a href="#">Health</a>
+									<a href="#">Jobs</a>
+									<a href="#">Magazine</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="#">Parenting</a>
+									<a href="#">Real Estate</a>
+									<a href="#">Style</a>
+									<a href="#">T Magazine</a>
+									<a href="#">Travel</a>
+									<a href="#">Love</a>
+								</div>
+								<div class="col-xs-12">
+									<span class="about_title">listings & more</span>
+								</div>
+								<div class="col-xs-6">
+									<a href="#">Reader Center</a>
+									<a href="#">Wirecutter</a>
+									<a href="#">Live Events</a>
+									<a href="#">The Learning Network</a>
+									<a href="#">Tools & Services</a>
+									<a href="#">N.Y.C. Events Guide</a>
+									<a href="#">Multimedia</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="#">Potography</a>
+									<a href="#">Video</a>
+									<a href="#">Newsletters</a>
+									<a href="#">NYT Store</a>
+									<a href="#">Times Journeys</a>
+									<a href="#">Manage My Account</a>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 hidden-xs newest_content_3">
-						<img class="img-responsive" src="images/3.jpg" alt="">
-						<div>
-							<a href="#"><h4>Watch 'The Weekly'</h4></a>
-							<p>We examine the most expensive presidential debut in U.S. history.</p>
-						</div>
-					</div>
-					<div class="col-md-3 hidden-xs hidden-sm newest_content_4">
-						<p>S&P 500 <span>+0.77%<span class="glyphicon glyphicon-arrow-up"></span></span></p>
-						<p>Dow <span>+0.67%<span class="glyphicon glyphicon-arrow-up"></span></span></p>
-						<p>Nasdaq <span>+0.75%<span class="glyphicon glyphicon-arrow-up"></span></span></p>
 					</div>
 				</div>
-				<div class="row main_news">
-					<div class="col-md-8 main_news_left">
-						<div class="main_left">
-							<div class="main">
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="container-fluid section">
+			<div class="row newest">
+				<div class="col-md-3 col-sm-4 hidden-xs newest_content_1">
+					<img class="img-responsive" src="images/1.jpg" alt="">
+					<div>
+						<a href="#">
+							<h4>The 'Climate Fwd:' Newletter</h4>
+						</a>
+						<p>One thing you can do: Beat the heat efficiently.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 hidden-xs newest_content_2">
+					<img class="img-responsive" src="images/2.jpg" alt="">
+					<div>
+						<a href="#">
+							<h4>The Book Review Podcast</h4>
+						</a>
+						<p>Taffy Brodesser-Akner talks about her best-selling debut novel.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 hidden-xs newest_content_3">
+					<img class="img-responsive" src="images/3.jpg" alt="">
+					<div>
+						<a href="#">
+							<h4>Watch 'The Weekly'</h4>
+						</a>
+						<p>We examine the most expensive presidential debut in U.S. history.</p>
+					</div>
+				</div>
+				<div class="col-md-3 hidden-xs hidden-sm newest_content_4">
+					<p>S&P 500 <span>+0.77%<span class="glyphicon glyphicon-arrow-up"></span></span></p>
+					<p>Dow <span>+0.67%<span class="glyphicon glyphicon-arrow-up"></span></span></p>
+					<p>Nasdaq <span>+0.75%<span class="glyphicon glyphicon-arrow-up"></span></span></p>
+				</div>
+			</div>
+			<div class="row main_news">
+				<div class="col-md-8 main_news_left">
+					<div class="main_left">
+						<div class="main">
+							<div class="row">
+								<div class="col-md-12">
+									<span class="title">fourth of july</span>
+								</div>
+								<div class="col-md-8 visible-xs visible-sm">
+									<img class="img-responsive main_content_1" src="images/4.jpg">
+									<p style="font-size: 13px; color: #555;">The Navy's Blue Angels soared over the
+										Lincoln Memorial on Thursday at the conclusion of
+										President Trump's speech. <span style="font-size: 12px; color: #ccc;">Gabriella
+											Demczuk for The New York Times</span></p>
+								</div>
+								<div class="col-md-4">
+									<div class="main_content">
+										<a href="#">
+											<h4>Trump, Flanked by Tanks, Calls for Unity at Fourth of July Event</h4>
+										</a>
+										<ul>
+											<li><a href="#">President Trump used the Lincoln Memorial as the backdrop
+													for an
+													homage to the American military and a rare call for unity.</a></li>
+											<li><a href="#">Speaking to a rain-soaked audience behind bulletproof glass,
+													Mr.Trump
+													spent most of his time recounting the history of the armed
+													forces.</a></li>
+										</ul>
+										<span>41m ago</span>
+									</div>
+									<div class="main_content">
+										<a href="#">
+											<h4>In Washington, two distinct versions of same place.</h4>
+										</a>
+										<span>7m ago 317 comments</span>
+									</div>
+								</div>
+								<div class="col-md-8 hidden-xs hidden-sm">
+									<img class="img-responsive main_content_1" src="images/4.jpg">
+									<p style="font-size: 13px; color: #555;">The Navy's Blue Angels soared over the
+										Lincoln Memorial on Thursday at the conclusion of
+										President Trump's speech. <span style="font-size: 12px; color: #ccc;">Gabriella
+											Demczuk for The New York Times</span></p>
+								</div>
+							</div>
+						</div>
+						<div class="after_main">
+							<div class="row contain_after_main">
+								<div class="col-md-12">
+									<span class="title">iran</span>
+								</div>
+								<div class="col-md-8 main_content main_content_other">
+									<a href="#">
+										<h4>He Loves American Coffee and Restaurants. Is He a Credible Negotiator for
+											Iran?</h4>
+									</a>
+									<ul>
+										<li><a href="#">Foreign Minister Mohammad Javad Zarif, a resident of the United
+												States on and off for nearly 30
+												years, is the Iranian most closely associated with the 2015 nuclear
+												deal.</a></li>
+										<li><a href="#">Now, with the deal on the brink of collapse, he's under fire
+												both at home and in Washington,
+												which is weighing sanctions on him.</a></li>
+									</ul>
+									<span>6h ago</span>
+								</div>
+								<div class="col-md-4 main_content">
+									<a href="#">
+										<h4>In a lengthy email exchange with The Times, Mr.Zarif took on his critics and
+											mused about the future.</h4>
+									</a>
+									<span>5h ago</span>
+								</div>
+							</div>
+						</div>
+						<div class="after_main">
+							<div class="row contain_after_main">
+								<div class="col-md-12">
+									<span class="title">u.s. politics</span>
+								</div>
+								<div class="col-md-4 visible-sm visible-xs">
+									<img class="img-responsive main_content_1" src="images/5.jpg">
+								</div>
+								<div class="col-md-4 main_content">
+									<a href="#">
+										<h4>Joe Biden and Kamala Harris Bring Their Debate-Stage Fight to lowa</h4>
+									</a>
+									<ul>
+										<li><a href="#">Mr.Biden expressed frustration at Ms.Harris's criticism about
+												his 1970s-era opposition
+												to busing, arguing that Democrats should "be talking about the
+												future."</a></li>
+										<li><a href="#">The exchanges around busing prolonged the most combative period
+												of the Democratic
+												primary to date.</a></li>
+									</ul>
+									<span>3h ago</span>
+								</div>
+								<div class="col-md-4 hidden-sm hidden-xs">
+									<img class="img-responsive main_content_1" src="images/5.jpg">
+								</div>
+								<div class="col-md-4">
+									<div class="row">
+										<div class="col-md-12" style="padding-bottom: 10px;">
+											<div class="main_content_2">
+												<a href="#">
+													<h4>Senator Kamala Harris spoke with voters at a Fourth of July
+														house
+														party in Indianola, Iowa, on Thursday.</h4>
+												</a>
+												<span>Hilary Swift for The New York Times</span>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="main_content_3">
+												<a href="#">
+													<h4>Justin Amash, the only
+														Republican Congress to call for impeaching Mr.Trump, said he was
+														leaving the party.</h4>
+												</a>
+												<span>7m ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="after_main">
+							<div class="row contain_after_main">
+								<div class="col-md-8 visible-xs visible-sm">
+									<img class="img-responsive main_content_1" src="images/12.jpg">
+									<p style="font-size: 13px; color: #555;">President Omar Hassan al-Bashir was toppled
+										in April after peaceful protesters massed for days at the gates of the sprawling
+										military headquarters in Khartoum. <span
+											style="font-size: 12px; color: #ccc;">Bryan Denton for The New York
+											Times</span></p>
+								</div>
+								<div class="col-md-4 main_content">
+									<a href="#">
+										<h4>Power-Sharing Deal Promises to End Sudan's Long, Bloddy Standoff</h4>
+									</a>
+									<ul>
+										<li><a>The country has been paralyzed since President Omar Hassan al-Bashir
+												was ousted in April after decades of turbulent rule.</a></li>
+										<li><a>The deal, seemingly the culmination of a popular uprising that morphed
+												into a countrywide movement, will last until elections are held.</a>
+										</li>
+									</ul>
+									<span>59m ago</span>
+								</div>
+								<div class="col-md-8 hidden-xs hidden-sm">
+									<img class="img-responsive main_content_1" src="images/12.jpg">
+									<p style="font-size: 13px; color: #555;">President Omar Hassan al-Bashir was toppled
+										in April after peaceful protesters massed for days at the gates of the sprawling
+										military headquarters in Khartoum. <span
+											style="font-size: 12px; color: #ccc;">Bryan Denton for The New York
+											Times</span></p>
+								</div>
+							</div>
+						</div>
+						<div class="after_main">
+							<div class="row contain_after_main">
+								<div class="col-md-4 main_content">
+									<a href="#">
+										<h4>Ordered Deported, Then Sent a $497,777 Bill From ICE</h4>
+									</a>
+								</div>
+								<div class="col-md-8 main_content">
+									<ul>
+										<li><a href="#">Several undocumented immigrants living in houses of worship have
+												been
+												fined hundreds of thousands of dollars by the government</a></li>
+										<li><a href="#">In the latest crackdown on illegal immigration by the Trump
+												administration,
+												ICE officials said the agency had the right to impose civil fines of up
+												to $799 a day.</a></li>
+									</ul>
+									<span>6h ago</span>
+								</div>
+							</div>
+						</div>
+						<div class="row contain_after_main">
+							<div class="col-md-6 main_content">
+								<a href="#">
+									<h3>When Santa Goes on Vacation</h3>
+								</a>
+								<p style="font-size: 14px;">Meet the Santas and Mrs. Clauses who live every day like
+									it's Christmas - even in July.</p>
+								<span>7m ago</span>
+							</div>
+							<div class="col-md-6">
+								<img class="img-responsive main_content_1" src="images/74.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 main_news_right">
+					<div class="row main_right">
+						<div class="col-md-12">
+							<div class="contain_after_main_right">
 								<div class="row">
-									<div class="col-md-12">
-										<span class="title">fourth of july</span>
+									<div class="col-md-10 col-xs-10 main_content_4">
+										<a href="#">
+											<h4>Opinion &gt;</h4>
+										</a>
+										<span class="name">Paul Krugman</span>
+										<a href="#">
+											<h4>Trump Is Losing His Trade Wars</h4>
+										</a>
+										<p>The pain is real, but the coercion isn't.</p>
+										<span>1m ago 106 comments</span>
 									</div>
-									<div class="col-md-8 visible-xs visible-sm">
-										<img class="img-responsive main_content_1" src="images/4.jpg">
-										<p style="font-size: 13px; color: #555;">The Navy's Blue Angels soared over the Lincoln Memorial on Thursday at the conclusion of 
-											President Trump's speech. <span style="font-size: 12px; color: #ccc;">Gabriella Demczuk for The New York Times</span></p>
+									<div class="col-md-2 col-xs-2">
+										<img class="avt" src="images/6.jpg" style="margin-top: 50px;">
 									</div>
-									<div class="col-md-4">
-										<div class="main_content">
-											<a href="#"><h4>Trump, Flanked by Tanks, Calls for Unity at Fourth of July Event</h4></a>
-											<ul>
-												<li><a href="#">President Trump used the Lincoln Memorial as the backdrop for an 
-												homage to the American military and a rare call for unity.</a></li>
-												<li><a href="#">Speaking to a rain-soaked audience behind bulletproof glass, Mr.Trump 
-												spent most of his time recounting the history of the armed forces.</a></li>
-											</ul>
-											<span>41m ago</span>
-										</div>
-										<div class="main_content">
-											<a href="#"><h4>In Washington, two distinct versions of same place.</h4></a>
-											<span>7m ago 317 comments</span>
-										</div>
-									</div>
-									<div class="col-md-8 hidden-xs hidden-sm">
-										<img class="img-responsive main_content_1" src="images/4.jpg">
-										<p style="font-size: 13px; color: #555;">The Navy's Blue Angels soared over the Lincoln Memorial on Thursday at the conclusion of 
-											President Trump's speech. <span style="font-size: 12px; color: #ccc;">Gabriella Demczuk for The New York Times</span></p>
-									</div>
-								</div>	
+								</div>
 							</div>
-							<div class="after_main">
-								<div class="row contain_after_main">
-									<div class="col-md-12">
-										<span class="title">iran</span>
+							<div class="contain_after_main">
+								<div class="row">
+									<div class="col-md-6 visible-xs visible-sm">
+										<img class="img-responsive main_content_1" src="images/7.jpg" alt="">
 									</div>
-									<div class="col-md-8 main_content main_content_other">
-										<a href="#"><h4>He Loves American Coffee and Restaurants. Is He a Credible Negotiator for Iran?</h4></a>
-										<ul>
-											<li><a href="#">Foreign Minister Mohammad Javad Zarif, a resident of the United States on and off for nearly 30 
-											years, is the Iranian most closely associated with the 2015 nuclear deal.</a></li>
-											<li><a href="#">Now, with the deal on the brink of collapse, he's under fire both at home and in Washington, 
-											which is weighing sanctions on him.</a></li>
-										</ul>
-										<span>6h ago</span>
-									</div>
-									<div class="col-md-4 main_content">
-										<a href="#"><h4>In a lengthy email exchange with The Times, Mr.Zarif took on his critics and mused about the future.</h4></a>
-										<span>5h ago</span>
-									</div>
-								</div>	
-							</div>
-							<div class="after_main">
-								<div class="row contain_after_main">
-									<div class="col-md-12">
-										<span class="title">u.s. politics</span>
-									</div>
-									<div class="col-md-4 visible-sm visible-xs">
-										<img class="img-responsive main_content_1" src="images/5.jpg">
-									</div>
-									<div class="col-md-4 main_content">
-										<a href="#"><h4>Joe Biden and Kamala Harris Bring Their Debate-Stage Fight to lowa</h4></a>
-										<ul>
-											<li><a href="#">Mr.Biden expressed frustration at Ms.Harris's criticism about his 1970s-era opposition 
-											to busing, arguing that Democrats should "be talking about the future."</a></li>
-											<li><a href="#">The exchanges around busing prolonged the most combative period of the Democratic 
-											primary to date.</a></li>
-										</ul>
+									<div class="col-md-6 main_content">
+										<h4>Jessie Kanzer</h4>
+										<a href="#">
+											<h4>My Kids Are Lucky to Be Growing Up in America</h4>
+										</a>
+										<p>I wonder whether my liberal neighbors know how forunate we are.</p>
 										<span>3h ago</span>
 									</div>
-									<div class="col-md-4 hidden-sm hidden-xs">
-										<img class="img-responsive main_content_1" src="images/5.jpg">
+									<div class="col-md-6 hidden-xs hidden-sm">
+										<img class="img-responsive main_content_1" src="images/7.jpg" alt="">
 									</div>
-									<div class="col-md-4">
-										<div class="row">
-											<div class="col-md-12" style="padding-bottom: 10px;">
-												<div class="main_content_2">
-													<a href="#"><h4>Senator Kamala Harris spoke with voters at a Fourth of July house 
-													party in Indianola, Iowa, on Thursday.</h4></a>
-													<span>Hilary Swift for The New York Times</span>	
+								</div>
+							</div>
+							<div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="contain_after_main_right">
+											<div class="row">
+												<div class="col-md-8 col-xs-10 main_content_5">
+													<h5>David Brooks</h5>
+													<a href="#">
+														<h5>Will Gen-Z Save the World?</h5>
+													</a>
+												</div>
+												<div class="col-md-4 col-xs-2">
+													<img class="avt" src="images/8.jpg" alt=""
+														style="margin-top: 10px;">
 												</div>
 											</div>
-											<div class="col-md-12">
-												<div class="main_content_3">
-													<a href="#"><h4>Justin Amash, the only 
-													Republican Congress to call for impeaching Mr.Trump, said he was leaving the party.</h4></a>
-													<span>7m ago</span>	
+										</div>
+										<div class="contain_after_main_right">
+											<div class="row">
+												<div class="col-md-12 main_content_5">
+													<h5>Pamela Herd and Donald P. Moynihan</h5>
+													<a href="#">
+														<h5>How to Straighten Out the Medicare Maze</h5>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="contain_after_main_right">
+											<div class="row">
+												<div class="col-md-8 col-xs-10 main_content_5">
+													<h5>Gail Collins</h5>
+													<a href="#">
+														<h5>Drink a Toast to Awful Presidents</h5>
+													</a>
+												</div>
+												<div class="col-md-4 col-xs-2">
+													<img class="avt" src="images/9.jpg" alt=""
+														style="margin-top: 10px;">
+												</div>
+											</div>
+										</div>
+										<div class="contain_main_content_5">
+											<div class="row">
+												<div class="col-md-12 main_content_5">
+													<h5>Elliott D. Woods</h5>
+													<a href="#">
+														<h5>Why Trump Likes Tanks</h5>
+													</a>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>	
+									<div class="col-md-6 contain_main_content_8">
+										<div class="contain_after_main_right">
+											<div class="row">
+												<div class="col-md-8 col-xs-10 main_content_5">
+													<h5>Bret Stephens</h5>
+													<a href="#">
+														<h5>Robespierre's America</h5>
+													</a>
+												</div>
+												<div class="col-md-4 col-xs-2">
+													<img class="avt" src="images/10.jpg" alt=""
+														style="margin-top: 10px;">
+												</div>
+											</div>
+										</div>
+										<div class="contain_after_main_right">
+											<div class="row">
+												<div class="col-md-12 main_content_5">
+													<h5>David M. Shribman</h5>
+													<a href="#">
+														<h5>How to Survive the 487 Days Till the Election</h5>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="contain_after_main_right">
+											<div class="row">
+												<div class="col-md-12 main_content_5">
+													<h5>The Editorial Board</h5>
+													<a href="#">
+														<h5>America the Beautiful</h5>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="contain_after_main_right">
+											<div class="row">
+												<div class="col-md-12 main_content_5">
+													<h5>Tom Philip</h5>
+													<a href="#">
+														<h5>Hollywood (Really) Hopes You're Nostalgic for the '90s This
+															Summer</h5>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="row">
+												<div class="col-md-12 main_content_5">
+													<a href="#">
+														<h5>Op-Art: U.S.A.! U.S.A.! U.S.A.?</h5>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="after_main">
-								<div class="row contain_after_main">
-									<div class="col-md-8 visible-xs visible-sm">
-										<img class="img-responsive main_content_1" src="images/12.jpg">
-										<p style="font-size: 13px; color: #555;">President Omar Hassan al-Bashir was toppled in April after peaceful protesters massed for days at the gates of the sprawling military headquarters in Khartoum. <span style="font-size: 12px; color: #ccc;">Bryan Denton for The New York Times</span></p>
-									</div>
-									<div class="col-md-4 main_content">
-										<a href="#"><h4>Power-Sharing Deal Promises to End Sudan's Long, Bloddy Standoff</h4></a>
-										<ul>
-											<li><a>The country has been paralyzed since President Omar Hassan al-Bashir 
-											was ousted in April after decades of turbulent rule.</a></li>
-											<li><a>The deal, seemingly the culmination of a popular uprising that morphed 
-											into a countrywide movement, will last until elections are held.</a></li>
-										</ul>
-										<span>59m ago</span>
-									</div>
-									<div class="col-md-8 hidden-xs hidden-sm">
-										<img class="img-responsive main_content_1" src="images/12.jpg">
-										<p style="font-size: 13px; color: #555;">President Omar Hassan al-Bashir was toppled in April after peaceful protesters massed for days at the gates of the sprawling military headquarters in Khartoum. <span style="font-size: 12px; color: #ccc;">Bryan Denton for The New York Times</span></p>
-									</div>
-								</div>	
-							</div>
-							<div class="after_main">
-								<div class="row contain_after_main">
-									<div class="col-md-4 main_content">
-										<a href="#"><h4>Ordered Deported, Then Sent a $497,777 Bill From ICE</h4></a>
-									</div>
-									<div class="col-md-8 main_content">
-										<ul>
-											<li><a href="#">Several undocumented immigrants living in houses of worship have been 
-											fined hundreds of thousands of dollars by the government</a></li>
-											<li><a href="#">In the latest crackdown on illegal immigration by the Trump administration, 
-											ICE officials said the agency had the right to impose civil fines of up to $799 a day.</a></li>
-										</ul>
-										<span>6h ago</span>
-									</div>
-								</div>	
-							</div>
-							<div class="row contain_after_main">
+						</div>
+					</div>
+					<div class="row" style="padding-top: 10px;">
+						<div class="col-md-12">
+							<span style="font-weight: bold; font-size: 14px; color: #000;">Editors' Picks</span>
+							<a href="#" style="color: #000;">
+								<h2 style="color: #000;">Short One Star, U.S. Women Just Called for Another</h2>
+							</a>
+						</div>
+						<div class="col-md-12"
+							style="border-bottom: 1px solid silver; padding-bottom: 10px; padding-top: 10px;">
+							<div class="row">
+								<div class="col-md-6 visible-xs visible-sm">
+									<img class="img-responsive main_content_1" src="images/11.jpg" alt="">
+								</div>
 								<div class="col-md-6 main_content">
-									<a href="#"><h3>When Santa Goes on Vacation</h3></a>
-									<p style="font-size: 14px;">Meet the Santas and Mrs. Clauses who live every day like it's Christmas - even in July.</p>
-									<span>7m ago</span>
-								</div>
-								<div class="col-md-6">
-									<img class="img-responsive main_content_1" src="images/74.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 main_news_right">
-						<div class="row main_right">
-							<div class="col-md-12">
-								<div class="contain_after_main_right">
-									<div class="row">
-										<div class="col-md-10 col-xs-10 main_content_4">
-											<a href="#"><h4>Opinion &gt;</h4></a>
-											<span class="name">Paul Krugman</span>
-											<a href="#"><h4>Trump Is Losing His Trade Wars</h4></a>
-											<p>The pain is real, but the coercion isn't.</p>
-											<span>1m ago 106 comments</span>
-										</div>
-										<div class="col-md-2 col-xs-2">
-											<img class="avt" src="images/6.jpg" style="margin-top: 50px;">
-										</div>
-									</div>
-								</div>
-								<div class="contain_after_main">
-									<div class="row">
-										<div class="col-md-6 visible-xs visible-sm">
-											<img class="img-responsive main_content_1" src="images/7.jpg" alt="">
-										</div>
-										<div class="col-md-6 main_content">
-											<h4>Jessie Kanzer</h4>
-											<a href="#"><h4>My Kids Are Lucky to Be Growing Up in America</h4></a>
-											<p>I wonder whether my liberal neighbors know how forunate we are.</p>
-											<span>3h ago</span>
-										</div>
-										<div class="col-md-6 hidden-xs hidden-sm">
-											<img class="img-responsive main_content_1" src="images/7.jpg" alt="">
-										</div>
-									</div>
-								</div>
-								<div>
-									<div class="row">
-										<div class="col-md-6">
-											<div class="contain_after_main_right">
-												<div class="row">
-													<div class="col-md-8 col-xs-10 main_content_5">
-														<h5>David Brooks</h5>
-														<a href="#"><h5>Will Gen-Z Save the World?</h5></a>
-													</div>
-													<div class="col-md-4 col-xs-2">
-														<img class="avt" src="images/8.jpg" alt="" style="margin-top: 10px;">
-													</div>
-												</div>	
-											</div>
-											<div class="contain_after_main_right">
-												<div class="row">
-													<div class="col-md-12 main_content_5">
-														<h5>Pamela Herd and Donald P. Moynihan</h5>
-														<a href="#"><h5>How to Straighten Out the Medicare Maze</h5></a>
-													</div>
-												</div>
-											</div>
-											<div class="contain_after_main_right">
-												<div class="row">
-													<div class="col-md-8 col-xs-10 main_content_5">
-														<h5>Gail Collins</h5>
-														<a href="#"><h5>Drink a Toast to Awful Presidents</h5></a>
-													</div>
-													<div class="col-md-4 col-xs-2">
-														<img class="avt" src="images/9.jpg" alt="" style="margin-top: 10px;">
-													</div>
-												</div>	
-											</div>
-											<div class="contain_main_content_5">
-												<div class="row">
-													<div class="col-md-12 main_content_5">
-														<h5>Elliott D. Woods</h5>
-														<a href="#"><h5>Why Trump Likes Tanks</h5></a>
-													</div>
-												</div>
-											</div>	
-										</div>
-										<div class="col-md-6 contain_main_content_8">
-											<div class="contain_after_main_right">
-												<div class="row">
-													<div class="col-md-8 col-xs-10 main_content_5">
-														<h5>Bret Stephens</h5>
-														<a href="#"><h5>Robespierre's America</h5></a>
-													</div>
-													<div class="col-md-4 col-xs-2">
-														<img class="avt" src="images/10.jpg" alt="" style="margin-top: 10px;">
-													</div>
-												</div>	
-											</div>
-											<div class="contain_after_main_right">
-												<div class="row">
-													<div class="col-md-12 main_content_5">
-														<h5>David M. Shribman</h5>
-														<a href="#"><h5>How to Survive the 487 Days Till the Election</h5></a>
-													</div>
-												</div>
-											</div>
-											<div class="contain_after_main_right">
-												<div class="row">
-													<div class="col-md-12 main_content_5">
-														<h5>The Editorial Board</h5>
-														<a href="#"><h5>America the Beautiful</h5></a>
-													</div>
-												</div>
-											</div>
-											<div class="contain_after_main_right">
-												<div class="row">
-													<div class="col-md-12 main_content_5">
-														<h5>Tom Philip</h5>
-														<a href="#"><h5>Hollywood (Really) Hopes You're Nostalgic for the '90s This Summer</h5></a>
-													</div>
-												</div>
-											</div>
-											<div>
-												<div class="row">
-													<div class="col-md-12 main_content_5">
-														<a href="#"><h5>Op-Art: U.S.A.! U.S.A.! U.S.A.?</h5></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row" style="padding-top: 10px;">
-							<div class="col-md-12">
-								<span style="font-weight: bold; font-size: 14px; color: #000;">Editors' Picks</span>
-								<a href="#" style="color: #000;"><h2 style="color: #000;">Short One Star, U.S. Women Just Called for Another</h2></a>
-							</div>
-							<div class="col-md-12" style="border-bottom: 1px solid silver; padding-bottom: 10px; padding-top: 10px;">
-								<div class="row">
-									<div class="col-md-6 visible-xs visible-sm">
-										<img class="img-responsive main_content_1" src="images/11.jpg" alt="">
-									</div>
-									<div class="col-md-6 main_content">
-										<p>When Megan Rapinoe was forced to miss a World Cup semifinal, the United States didn't miss a beat.</p>
-										<span>Sports 5h ago</span>
-									</div>
-									<div class="col-md-6 hidden-xs hidden-sm">
-										<img class="img-responsive main_content_1" src="images/11.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12" style="border-bottom: 1px solid silver; padding-bottom: 10px; padding-top: 10px;">
-								<div class="row">
-									<div class="col-md-6 visible-sm visible-xs">
-										<img class="img-responsive main_content_1" src="images/13.jpg" alt="">
-									</div>
-									<div class="col-md-6 main_content">
-										<a href="#"><h4>Drink a Pint, Waste Less Food</h4></a>
-										<p>A brewery in Manchester, England, has been using discarded breakfast cereal to make beer 
-										in a project intended to address the issue of waste.</p>
-										<span>Media 5h ago</span>
-									</div>
-									<div class="col-md-6 hidden-sm hidden-xs">
-										<img class="img-responsive main_content_1" src="images/13.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12" style="padding-top: 10px;">
-								<div class="row">
-									<div class="col-md-6 visible-xs visible-sm">
-										<img class="img-responsive main_content_1" src="images/14.jpg" alt="">
-									</div>
-									<div class="col-md-6 main_content">
-										<a href="#"><h4>Can't Get to the Beach? These Novels Take You There</h4></a>
-										<p>Pick up one of these to feel the sand beneath your toes and smell the salty, tangy ocean air.</p>
-										<span>Books July 4</span>
-									</div>
-									<div class="col-md-6 hidden-xs hidden-sm">
-										<img class="img-responsive main_content_1" src="images/14.jpg" alt="">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row others_news">
-					<div class="col-md-12" style="padding-top: 10px;">
-						<span style="font-weight: bold;">In Other News</span>
-					</div>
-					<div class="col-md-5">
-						<div class="main_head_content">
-							<img class="img-responsive main_content_1" src="images/17.jpg" alt="">
-							<span>Bryan Anselm for The New York Times</span>
-						</div>
-						<div class="main_content_6">
-							<a href="#"><h4>Why the 'Bridgegate' Scandal Could Backfire Prosecutors</h4></a>
-							<p>The Supreme Court agreed to hear the defendant's appeal, suggesting that the 
-							justices could wipe away a powerful statute.</p>
-							<span>New York 5m ago</span>
-						</div>
-					</div>
-					<div class="col-md-5 others_news_middle">
-						<div class="contain_main_content_7">
-							<div class="row">
-								<div class="col-md-6 visible-xs visible-sm">
-									<img class="img-responsive main_content_1" src="images/16.jpg" alt="">
-								</div>
-								<div class="col-md-6 main_content_7">
-									<a href="#"><h5>She Was Forced to Give Birth in Handcuffs. Now Her Case Is Changing Police Rules.</h5></a>
-									<p>"No woman should ever have to go through the traumatic experience that I went through," the 28-year-old Bronx mother said.</p>
-									<span>New York 5m ago 59 comments</span>
-								</div>
-								<div class="col-md-6 hidden-xs hidden-sm">
-									<img class="img-responsive main_content_1" src="images/16.jpg" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="contain_content_7">
-							<div class="row">
-								<div class="col-md-6 visible-xs visible-sm">
-									<img class="img-responsive main_content_1" src="images/19.jpg" alt="">
-								</div>
-								<div class="col-md-6 main_content_7">
-									<a href="#"><h5>6.4-Magnitude Earthquake and Aftershocks 
-									Rattle Southern California</h5></a>
-									<p>Dozens of aftershocks shook the same remote region after the big quake. 
-									But it appeared that no one was seriously injured</p>
-									<span>U.S. 4h ago</span>
-								</div>
-								<div class="col-md-6 hidden-xs hidden-sm">
-									<img class="img-responsive main_content_1" src="images/19.jpg" alt="">
-								</div>
-							</div>
-						</div>
-						<div style="padding-top: 10px;">
-							<div class="row">
-								<div class="col-md-6 visible-xs visible-sm">
-									<img class="img-responsive main_content_1" src="images/18.jpg" alt="">
-								</div>
-								<div class="col-md-6 main_content_7">
-									<a href="#"><h5>Interest Rates Keep Falling, Befuddling the Experts</h5></a>
-									<p>Investors expect even lower growth and inflation. This isn't the way it's 
-									supposed to work, an Upshot writer finds in an analysis.</p>
-									<span>The Upshot 5m ago 36 comments</span>
-								</div>
-								<div class="col-md-6 hidden-xs hidden-sm">
-									<img class="img-responsive main_content_1" src="images/18.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-2">
-						<div class="contain_content_7">
-							<div class="row">
-								<div class="col-md-12 main_content_7">
-									<a href="#"><h5>Venezuelan special forces have carried out thousands of extrajudicial killing 
-									in the past 18 months, the U.N. said</h5></a>
-								</div>
-							</div>
-						</div>
-						<div class="contain_content_7">
-							<div class="row">
-								<div class="col-md-12 main_content_7">
-									<a href="#"><h5>An 11th-hour twist triggered a recount in the primary race for Queens 
-									district attorney. Here's what happened</h5></a>
-								</div>
-							</div>
-						</div>
-						<div class="contain_content_7">
-							<div class="row">
-								<div class="col-md-12 main_content_7">
-									<a href="#"><h5>Mexico's president created a new force to combat rising crime. The federal 
-									police are rebelling against the plan.</h5></a>
-								</div>
-							</div>
-						</div>
-						<div class="contain_content_7">
-							<div class="row">
-								<div class="col-md-12 main_content_7">
-									<a href="#"><h5>A former Norwegian official has been convicted of abusing his power 
-									to force asylum seekers to have sex with him.</h5></a>
-								</div>
-							</div>
-						</div>
-						<div style="padding-top: 10px;">
-							<div class="row">
-								<div class="col-md-12 main_content_7">
-									<a href="#"><h5>A meeting between Presindent Vladimir V.Putin of Russia and 
-									Pope Francis represented a clash of worldviews in the West.</h5></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row smarter_living_news">
-					<div class="col-md-12" style="padding-top: 10px;">
-						<a href="#"><span class="title">Smarter Living &gt;</span></a>
-					</div>
-					<div class="col-md-3 hidden-sm hidden-xs smarter_living_contents">
-						<img class="img-responsive main_content_1" src="images/23.jpg" alt="">
-						<a href="#"><h5>'Guilty' Pleasures? No Such Thing</h5></a>
-						<span>Smarter Living July 2</span>
-					</div>
-					<div class="col-md-3 hidden-sm hidden-xs smarter_living_contents">
-						<img class="img-responsive main_content_1" src="images/24.jpg" alt="">
-						<a href="#"><h5>So You've Made a Huge Mistake. What Now?</h5></a>
-						<span>Smarter Living June 17</span>
-					</div>
-					<div class="col-md-3 hidden-sm hidden-xs smarter_living_contents">
-						<img class="img-responsive main_content_1" src="images/22.jpg" alt="">
-						<a href="#"><h5>Wait, I Thought You Had Outgrown This</h5></a>
-						<span>June 17</span>
-					</div>
-					<div class="col-md-3 hidden-sm hidden-xs smarter_living_contents">
-						<img class="img-responsive main_content_1" src="images/21.jpg" alt="">
-						<a href="#"><h5>How (and When) to Limit Kids' Tech Use</h5></a>
-						<span>June 26</span>
-					</div>
-					<div class="col-md-3 hidden-sm hidden-xs smarter_living_contents">
-						<img class="img-responsive main_content_1" src="images/20.gif" alt="">
-						<a href="#"><h5>A Shortcut to Packing Your Suitcase the Right Way</h5></a>
-						<span>Travel July 4</span>
-					</div>
-					<div class="col-xs-12 contain_smart_living_contents">
-						<div class="row">
-							<div class="col-xs-8 visible-sm visible-xs smarter_living_contents">
-								<a href="#"><h5>'Guilty' Pleasures? No Such Thing</h5></a>
-								<span>Smarter Living July 2</span>
-							</div>
-							<div class="col-xs-4 visible-sm visible-xs">
-								<img class="img-responsive main_content_1" src="images/23.jpg" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 contain_smart_living_contents">
-						<div class="row">
-							<div class="col-xs-8 visible-sm visible-xs smarter_living_contents">
-								<a href="#"><h5>So You've Made a Huge Mistake. What Now?</h5></a>
-								<span>Smarter Living June 17</span>
-							</div>
-							<div class="col-xs-4 visible-sm visible-xs">
-								<img class="img-responsive main_content_1" src="images/24.jpg" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 contain_smart_living_contents">
-						<div class="row">
-							<div class="col-xs-8 visible-sm visible-xs smarter_living_contents">
-								<a href="#"><h5>Wait, I Thought You Had Outgrown This</h5></a>
-								<span>June 17</span>
-							</div>
-							<div class="col-xs-4 visible-sm visible-xs">
-								<img class="img-responsive main_content_1" src="images/22.jpg" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 contain_smart_living_contents">
-						<div class="row">
-							<div class="col-xs-8 visible-sm visible-xs smarter_living_contents">
-								<a href="#"><h5>How (and When) to Limit Kids' Tech Use</h5></a>
-								<span>June 26</span>
-							</div>
-							<div class="col-xs-4 visible-sm visible-xs">
-								<img class="img-responsive main_content_1" src="images/21.jpg" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 contain_smart_living_contents">
-						<div class="row">
-							<div class="col-xs-8 visible-sm visible-xs smarter_living_contents">
-								<a href="#"><h5>A Shortcut to Packing Your Suitcase the Right Way</h5></a>
-								<span>Travel July 4</span>
-							</div>
-							<div class="col-xs-4 visible-sm visible-xs">
-								<img class="img-responsive main_content_1" src="images/20.gif" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row futures_news">
-					<div class="col-md-12" style="padding-top: 10px;">
-						<span class="title">Futures</span>
-					</div>
-					<div class="col-md-12">
-						<div class="row">
-							<div class="col-md-6" style="padding-top: 10px;">
-								<div class="main_head_content">
-									<img class="img-responsive main_content_1" src="images/25.jpg" alt="">
-									<span>Joyce Dopkeen/The New York Times</span>
-								</div>
-								<div class="main_content_9">
-									<a href="#"><h3>The History of Private Planes: Less High Life, More Daily Grind</h3></a>
-									<p>The 41,000-foot commute is still a commute.</p>
-									<span>Business 4h ago</span>
-								</div>
-							</div>
-							<div class="col-md-6" style="padding-top: 10px;">
-								<div style="border-bottom: 1px solid silver; padding-bottom: 10px;">
-									<div class="row">
-										<div class="col-md-6 main_content_7" style="border-right: 1px solid silver;">
-											<img class="img-responsive main_content_1" src="images/26.jpg" alt="">
-											<a href="#"><h5>Rafael Nadal Doesn't Fall for 
-											Nick Kyrgios's Bag of Tricks</h5></a>
-											<p>The second-round duel at Wimbledon had something 
-											often lacking in this golden era of men's tennis: an edge.</p>
-											<span>Tenis 1h ago</span>
-										</div>
-										<div class="col-md-6 main_content_7">
-											<img class="img-responsive main_content_1" src="images/27.jpg" alt="">
-											<a href="#"><h5>Writers From Idris Elba Play Say They Were Erased</h5></a>
-											<p>Two playwrights said their work on "Tree", which will premiere at the Manchester International Festival, was not properly acknowledged.</p>
-											<span>Theater 4h ago</span>
-										</div>
-									</div>
-								</div>
-								<div style="padding-top: 10px;">
-									<div class="row">
-										<div class="col-md-6 main_content_7" style="border-right: 1px solid silver;">
-											<img class="img-responsive main_content_1" src="images/28.jpg" alt="">
-											<a href="#"><h5>At Valentino, Diversity by Design</h5></a>
-											<p>At Viktor & Rolf, sustainabilty. Finally, designers 
-											are engaging with the issues of the day instead of ignoring them.</p>
-											<span>Fashion 4h ago</span>
-										</div>
-										<div class="col-md-6 main_content_7">
-											<img class="img-responsive main_content_1" src="images/29.jpg" alt="">
-											<a href="#"><h5>'Rock of Ages' Returns, Scaled Dwon 
-											but Big Hair Intact</h5></a>
-											<p>In a limited run Off Broadway, the jukebox musical about 
-											love and rocking out in the 1980s now in cludes songs by Def Leppard.</p>
-											<span>Theater 54m ago</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row discovery_news">
-					<div class="col-md-12" style="padding-top: 10px;">
-						<span class="title">Discovery</span>
-					</div>
-					<div class="col-md-3" style="padding-top: 10px; border-right: 1px solid silver;">
-						<div class="main_head_content">
-							<img class="img-responsive main_content_1" src="images/31.jpg" alt="">
-							<span>Tara Pixley for The New York Times</span>
-						</div>
-						<div class="main_content_8">
-							<a href="#"><h4>After Spinal Surgery in the Womb, a Boy Stands</h4></a>
-							<p>Charley Royer, who was expected to be paralyzed from the waist down, is 
-							chasing a dog around the house and learning to walk.</p>
-							<span>Health June 29 54 comments</span>
-						</div>
-					</div>
-					<div class="col-md-3" style="padding-top: 10px; border-right: 1px solid silver;">
-						<div class="main_head_content">
-							<img class="img-responsive main_content_1" src="images/32.jpg" alt="">
-							<span>Kelly Radinsky</span>
-						</div>
-						<div class="main_content_8">
-							<a href="#"><h4>What Do Teenagers Need? Ask the Family Dog</h4></a>
-							<p>Pets provide comforts that seem tailor-made for the stresses of normal adolescent development.</p>
-							<span>Family July 4</span>
-						</div>
-					</div>
-					<div class="col-md-6" style="padding-top: 10px;">
-						<div style="border-bottom: 1px solid silver; padding-bottom: 10px;">
-							<div class="row">
-								<div class="col-md-6 visible-xs visible-sm">
-									<img class="img-responsive main_content_1" src="images/30.jpg" alt="">
-								</div>
-								<div class="col-md-6 main_content_10">
-									<a href="#"><h4>New Weapons Against Cancer: Millions of Bacteria Programmed to Kill</h4></a>
-									<p>Genetically modified microbes release "nanobodies" that alert the immune system to cancer in mice, scientists report.</p>
-									<span>Science July 4</span>
-								</div>
-								<div class="col-md-6 hidden-xs hidden-sm">
-									<img class="img-responsive main_content_1" src="images/30.jpg" alt="">
-								</div>
-							</div>	
-						</div>
-						<div style="padding-top: 10px;">
-							<div class="row">
-								<div class="col-md-6 visible-xs visible-sm">
-									<img class="img-responsive main_content_1" src="images/33.jpg" alt="">
-								</div>
-								<div class="col-md-6 main_content_10">
-									<a href="#"><h4>Why So Many of Us Don't Lose Weight When We Exercise</h4></a>
-									<p>Most of us eat more when we exercise, and thought it may be just a few extra bites a day, the result is weight gain.</p>
-									<span>Move July 3 329 comments</span>
-								</div>
-								<div class="col-md-6 hidden-xs hidden-sm">
-									<img class="img-responsive main_content_1" src="images/33.jpg" alt="">
-								</div>
-							</div>	
-						</div>
-					</div>
-				</div>
-				<div class="row most_popular_news">
-					<div class="col-md-9" style="border-right: 1px solid silver;">
-						<div style="padding-top: 10px; border-top: 4px double #000;">
-							<div class="row">
-								<div class="col-md-12 title_2">
-									<a href="#"><span>Most Popular &gt;</span></a>
-								</div>		
-								<div class="col-md-3 main_content_11">
-									<img class="img-responsive main_content_1" src="images/34.jpg" alt="">
-									<a href="#"><h4>Can You Answer the 10 Hardest Questions 
-									on the U.S. Citizenship Test?</h4></a>
-									<p>Thousands of people will become American citizens around Independence 
-									Day. But first they had to pass a citizenship test. Could you do the same?</p>
-									<span>U.S. 5h ago</span>
-								</div>
-								<div class="col-md-3 main_content_11">
-									<img class="img-responsive main_content_1" src="images/38.jpg" alt="">
-									<a href="#"><h4>10 Medical Myths We Should Stop Believing</h4></a>
-									<p>Researchers identified nearly 400 medical practices and theories that 
-									were contradicted by regorous studies. Here are some of the most notable findings.</p>
-									<span>Health July 4 659 comments</span>
-								</div>
-								<div class="col-md-3 main_content_11">
-									<img class="img-responsive main_content_1" src="images/37.jpg" alt="">
-									<a href="#"><h4>Trump, Flanked by Tanks, Call for Unity at Fourth of July Event</h4></a>
-									<p>The president began with a rare call for unity in his 45-minute speech, 
-									but mostly spent time recounting the history of the armed forces, planes punctuating his message.</p>
-									<span>Politics 43m ago</span>
-								</div>
-								<div class="col-md-3 main_content_11">
-									<img class="img-responsive main_content_1" src="images/36.jpg" alt="">
-									<a href="#"><h4>Short One Star, U.S. Women Just Called for Another</h4></a>
-									<p>When Megan Rapinoe was forced to miss a World Cup semifinal, 
-									the United States didn't miss a beat.</p>
+									<p>When Megan Rapinoe was forced to miss a World Cup semifinal, the United States
+										didn't miss a beat.</p>
 									<span>Sports 5h ago</span>
 								</div>
-							</div>	
-						</div>	
-					</div>
-					<div class="col-md-3">
-						<div style="border-top: 4px double #000; padding-top: 10px;">
-							<div class="row">
-								<div class="col-md-12 title_2">
-									<a href="#"><span>Play &gt;</span></a>
+								<div class="col-md-6 hidden-xs hidden-sm">
+									<img class="img-responsive main_content_1" src="images/11.jpg" alt="">
 								</div>
 							</div>
+						</div>
+						<div class="col-md-12"
+							style="border-bottom: 1px solid silver; padding-bottom: 10px; padding-top: 10px;">
+							<div class="row">
+								<div class="col-md-6 visible-sm visible-xs">
+									<img class="img-responsive main_content_1" src="images/13.jpg" alt="">
+								</div>
+								<div class="col-md-6 main_content">
+									<a href="#">
+										<h4>Drink a Pint, Waste Less Food</h4>
+									</a>
+									<p>A brewery in Manchester, England, has been using discarded breakfast cereal to
+										make beer
+										in a project intended to address the issue of waste.</p>
+									<span>Media 5h ago</span>
+								</div>
+								<div class="col-md-6 hidden-sm hidden-xs">
+									<img class="img-responsive main_content_1" src="images/13.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12" style="padding-top: 10px;">
+							<div class="row">
+								<div class="col-md-6 visible-xs visible-sm">
+									<img class="img-responsive main_content_1" src="images/14.jpg" alt="">
+								</div>
+								<div class="col-md-6 main_content">
+									<a href="#">
+										<h4>Can't Get to the Beach? These Novels Take You There</h4>
+									</a>
+									<p>Pick up one of these to feel the sand beneath your toes and smell the salty,
+										tangy ocean air.</p>
+									<span>Books July 4</span>
+								</div>
+								<div class="col-md-6 hidden-xs hidden-sm">
+									<img class="img-responsive main_content_1" src="images/14.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row others_news">
+				<div class="col-md-12" style="padding-top: 10px;">
+					<span style="font-weight: bold;">In Other News</span>
+				</div>
+				<div class="col-md-5">
+					<div class="main_head_content">
+						<img class="img-responsive main_content_1" src="images/17.jpg" alt="">
+						<span>Bryan Anselm for The New York Times</span>
+					</div>
+					<div class="main_content_6">
+						<a href="#">
+							<h4>Why the 'Bridgegate' Scandal Could Backfire Prosecutors</h4>
+						</a>
+						<p>The Supreme Court agreed to hear the defendant's appeal, suggesting that the
+							justices could wipe away a powerful statute.</p>
+						<span>New York 5m ago</span>
+					</div>
+				</div>
+				<div class="col-md-5 others_news_middle">
+					<div class="contain_main_content_7">
+						<div class="row">
+							<div class="col-md-6 visible-xs visible-sm">
+								<img class="img-responsive main_content_1" src="images/16.jpg" alt="">
+							</div>
+							<div class="col-md-6 main_content_7">
+								<a href="#">
+									<h5>She Was Forced to Give Birth in Handcuffs. Now Her Case Is Changing Police
+										Rules.</h5>
+								</a>
+								<p>"No woman should ever have to go through the traumatic experience that I went
+									through," the 28-year-old Bronx mother said.</p>
+								<span>New York 5m ago 59 comments</span>
+							</div>
+							<div class="col-md-6 hidden-xs hidden-sm">
+								<img class="img-responsive main_content_1" src="images/16.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="contain_content_7">
+						<div class="row">
+							<div class="col-md-6 visible-xs visible-sm">
+								<img class="img-responsive main_content_1" src="images/19.jpg" alt="">
+							</div>
+							<div class="col-md-6 main_content_7">
+								<a href="#">
+									<h5>6.4-Magnitude Earthquake and Aftershocks
+										Rattle Southern California</h5>
+								</a>
+								<p>Dozens of aftershocks shook the same remote region after the big quake.
+									But it appeared that no one was seriously injured</p>
+								<span>U.S. 4h ago</span>
+							</div>
+							<div class="col-md-6 hidden-xs hidden-sm">
+								<img class="img-responsive main_content_1" src="images/19.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div style="padding-top: 10px;">
+						<div class="row">
+							<div class="col-md-6 visible-xs visible-sm">
+								<img class="img-responsive main_content_1" src="images/18.jpg" alt="">
+							</div>
+							<div class="col-md-6 main_content_7">
+								<a href="#">
+									<h5>Interest Rates Keep Falling, Befuddling the Experts</h5>
+								</a>
+								<p>Investors expect even lower growth and inflation. This isn't the way it's
+									supposed to work, an Upshot writer finds in an analysis.</p>
+								<span>The Upshot 5m ago 36 comments</span>
+							</div>
+							<div class="col-md-6 hidden-xs hidden-sm">
+								<img class="img-responsive main_content_1" src="images/18.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="contain_content_7">
+						<div class="row">
+							<div class="col-md-12 main_content_7">
+								<a href="#">
+									<h5>Venezuelan special forces have carried out thousands of extrajudicial killing
+										in the past 18 months, the U.N. said</h5>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="contain_content_7">
+						<div class="row">
+							<div class="col-md-12 main_content_7">
+								<a href="#">
+									<h5>An 11th-hour twist triggered a recount in the primary race for Queens
+										district attorney. Here's what happened</h5>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="contain_content_7">
+						<div class="row">
+							<div class="col-md-12 main_content_7">
+								<a href="#">
+									<h5>Mexico's president created a new force to combat rising crime. The federal
+										police are rebelling against the plan.</h5>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="contain_content_7">
+						<div class="row">
+							<div class="col-md-12 main_content_7">
+								<a href="#">
+									<h5>A former Norwegian official has been convicted of abusing his power
+										to force asylum seekers to have sex with him.</h5>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div style="padding-top: 10px;">
+						<div class="row">
+							<div class="col-md-12 main_content_7">
+								<a href="#">
+									<h5>A meeting between Presindent Vladimir V.Putin of Russia and
+										Pope Francis represented a clash of worldviews in the West.</h5>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row smarter_living_news">
+				<div class="col-md-12" style="padding-top: 10px;">
+					<a href="#"><span class="title">Smarter Living &gt;</span></a>
+				</div>
+				<div class="col-md-3 hidden-sm hidden-xs smarter_living_contents">
+					<img class="img-responsive main_content_1" src="images/23.jpg" alt="">
+					<a href="#">
+						<h5>'Guilty' Pleasures? No Such Thing</h5>
+					</a>
+					<span>Smarter Living July 2</span>
+				</div>
+				<div class="col-md-3 hidden-sm hidden-xs smarter_living_contents">
+					<img class="img-responsive main_content_1" src="images/24.jpg" alt="">
+					<a href="#">
+						<h5>So You've Made a Huge Mistake. What Now?</h5>
+					</a>
+					<span>Smarter Living June 17</span>
+				</div>
+				<div class="col-md-3 hidden-sm hidden-xs smarter_living_contents">
+					<img class="img-responsive main_content_1" src="images/22.jpg" alt="">
+					<a href="#">
+						<h5>Wait, I Thought You Had Outgrown This</h5>
+					</a>
+					<span>June 17</span>
+				</div>
+				<div class="col-md-3 hidden-sm hidden-xs smarter_living_contents">
+					<img class="img-responsive main_content_1" src="images/21.jpg" alt="">
+					<a href="#">
+						<h5>How (and When) to Limit Kids' Tech Use</h5>
+					</a>
+					<span>June 26</span>
+				</div>
+				<div class="col-md-3 hidden-sm hidden-xs smarter_living_contents">
+					<img class="img-responsive main_content_1" src="images/20.gif" alt="">
+					<a href="#">
+						<h5>A Shortcut to Packing Your Suitcase the Right Way</h5>
+					</a>
+					<span>Travel July 4</span>
+				</div>
+				<div class="col-xs-12 contain_smart_living_contents">
+					<div class="row">
+						<div class="col-xs-8 visible-sm visible-xs smarter_living_contents">
+							<a href="#">
+								<h5>'Guilty' Pleasures? No Such Thing</h5>
+							</a>
+							<span>Smarter Living July 2</span>
+						</div>
+						<div class="col-xs-4 visible-sm visible-xs">
+							<img class="img-responsive main_content_1" src="images/23.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 contain_smart_living_contents">
+					<div class="row">
+						<div class="col-xs-8 visible-sm visible-xs smarter_living_contents">
+							<a href="#">
+								<h5>So You've Made a Huge Mistake. What Now?</h5>
+							</a>
+							<span>Smarter Living June 17</span>
+						</div>
+						<div class="col-xs-4 visible-sm visible-xs">
+							<img class="img-responsive main_content_1" src="images/24.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 contain_smart_living_contents">
+					<div class="row">
+						<div class="col-xs-8 visible-sm visible-xs smarter_living_contents">
+							<a href="#">
+								<h5>Wait, I Thought You Had Outgrown This</h5>
+							</a>
+							<span>June 17</span>
+						</div>
+						<div class="col-xs-4 visible-sm visible-xs">
+							<img class="img-responsive main_content_1" src="images/22.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 contain_smart_living_contents">
+					<div class="row">
+						<div class="col-xs-8 visible-sm visible-xs smarter_living_contents">
+							<a href="#">
+								<h5>How (and When) to Limit Kids' Tech Use</h5>
+							</a>
+							<span>June 26</span>
+						</div>
+						<div class="col-xs-4 visible-sm visible-xs">
+							<img class="img-responsive main_content_1" src="images/21.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 contain_smart_living_contents">
+					<div class="row">
+						<div class="col-xs-8 visible-sm visible-xs smarter_living_contents">
+							<a href="#">
+								<h5>A Shortcut to Packing Your Suitcase the Right Way</h5>
+							</a>
+							<span>Travel July 4</span>
+						</div>
+						<div class="col-xs-4 visible-sm visible-xs">
+							<img class="img-responsive main_content_1" src="images/20.gif" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row futures_news">
+				<div class="col-md-12" style="padding-top: 10px;">
+					<span class="title">Futures</span>
+				</div>
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-6" style="padding-top: 10px;">
+							<div class="main_head_content">
+								<img class="img-responsive main_content_1" src="images/25.jpg" alt="">
+								<span>Joyce Dopkeen/The New York Times</span>
+							</div>
+							<div class="main_content_9">
+								<a href="#">
+									<h3>The History of Private Planes: Less High Life, More Daily Grind</h3>
+								</a>
+								<p>The 41,000-foot commute is still a commute.</p>
+								<span>Business 4h ago</span>
+							</div>
+						</div>
+						<div class="col-md-6" style="padding-top: 10px;">
 							<div style="border-bottom: 1px solid silver; padding-bottom: 10px;">
 								<div class="row">
-									<div class="col-md-12 main_content_12">
-										<img src="images/35.jpg" alt="">
-										<a href="#"><h4>Try Tiles</h4></a>
-										<p>Take a break from the daily grind with our newest game. Match tile 
-										elements to keep your chain going.</p>
+									<div class="col-md-6 main_content_7" style="border-right: 1px solid silver;">
+										<img class="img-responsive main_content_1" src="images/26.jpg" alt="">
+										<a href="#">
+											<h5>Rafael Nadal Doesn't Fall for
+												Nick Kyrgios's Bag of Tricks</h5>
+										</a>
+										<p>The second-round duel at Wimbledon had something
+											often lacking in this golden era of men's tennis: an edge.</p>
+										<span>Tenis 1h ago</span>
+									</div>
+									<div class="col-md-6 main_content_7">
+										<img class="img-responsive main_content_1" src="images/27.jpg" alt="">
+										<a href="#">
+											<h5>Writers From Idris Elba Play Say They Were Erased</h5>
+										</a>
+										<p>Two playwrights said their work on "Tree", which will premiere at the
+											Manchester International Festival, was not properly acknowledged.</p>
+										<span>Theater 4h ago</span>
 									</div>
 								</div>
 							</div>
 							<div style="padding-top: 10px;">
 								<div class="row">
-									<div class="col-md-12 main_content_12">
-										<a href="#"><h4>The Crossword, the Mini, Spelling Bee and More</h4></a>
-										<p>Solve the daily puzzle edited by Will Shortz, or try our 
+									<div class="col-md-6 main_content_7" style="border-right: 1px solid silver;">
+										<img class="img-responsive main_content_1" src="images/28.jpg" alt="">
+										<a href="#">
+											<h5>At Valentino, Diversity by Design</h5>
+										</a>
+										<p>At Viktor & Rolf, sustainabilty. Finally, designers
+											are engaging with the issues of the day instead of ignoring them.</p>
+										<span>Fashion 4h ago</span>
+									</div>
+									<div class="col-md-6 main_content_7">
+										<img class="img-responsive main_content_1" src="images/29.jpg" alt="">
+										<a href="#">
+											<h5>'Rock of Ages' Returns, Scaled Dwon
+												but Big Hair Intact</h5>
+										</a>
+										<p>In a limited run Off Broadway, the jukebox musical about
+											love and rocking out in the 1980s now in cludes songs by Def Leppard.</p>
+										<span>Theater 54m ago</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row discovery_news">
+				<div class="col-md-12" style="padding-top: 10px;">
+					<span class="title">Discovery</span>
+				</div>
+				<div class="col-md-3" style="padding-top: 10px; border-right: 1px solid silver;">
+					<div class="main_head_content">
+						<img class="img-responsive main_content_1" src="images/31.jpg" alt="">
+						<span>Tara Pixley for The New York Times</span>
+					</div>
+					<div class="main_content_8">
+						<a href="#">
+							<h4>After Spinal Surgery in the Womb, a Boy Stands</h4>
+						</a>
+						<p>Charley Royer, who was expected to be paralyzed from the waist down, is
+							chasing a dog around the house and learning to walk.</p>
+						<span>Health June 29 54 comments</span>
+					</div>
+				</div>
+				<div class="col-md-3" style="padding-top: 10px; border-right: 1px solid silver;">
+					<div class="main_head_content">
+						<img class="img-responsive main_content_1" src="images/32.jpg" alt="">
+						<span>Kelly Radinsky</span>
+					</div>
+					<div class="main_content_8">
+						<a href="#">
+							<h4>What Do Teenagers Need? Ask the Family Dog</h4>
+						</a>
+						<p>Pets provide comforts that seem tailor-made for the stresses of normal adolescent
+							development.</p>
+						<span>Family July 4</span>
+					</div>
+				</div>
+				<div class="col-md-6" style="padding-top: 10px;">
+					<div style="border-bottom: 1px solid silver; padding-bottom: 10px;">
+						<div class="row">
+							<div class="col-md-6 visible-xs visible-sm">
+								<img class="img-responsive main_content_1" src="images/30.jpg" alt="">
+							</div>
+							<div class="col-md-6 main_content_10">
+								<a href="#">
+									<h4>New Weapons Against Cancer: Millions of Bacteria Programmed to Kill</h4>
+								</a>
+								<p>Genetically modified microbes release "nanobodies" that alert the immune system to
+									cancer in mice, scientists report.</p>
+								<span>Science July 4</span>
+							</div>
+							<div class="col-md-6 hidden-xs hidden-sm">
+								<img class="img-responsive main_content_1" src="images/30.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div style="padding-top: 10px;">
+						<div class="row">
+							<div class="col-md-6 visible-xs visible-sm">
+								<img class="img-responsive main_content_1" src="images/33.jpg" alt="">
+							</div>
+							<div class="col-md-6 main_content_10">
+								<a href="#">
+									<h4>Why So Many of Us Don't Lose Weight When We Exercise</h4>
+								</a>
+								<p>Most of us eat more when we exercise, and thought it may be just a few extra bites a
+									day, the result is weight gain.</p>
+								<span>Move July 3 329 comments</span>
+							</div>
+							<div class="col-md-6 hidden-xs hidden-sm">
+								<img class="img-responsive main_content_1" src="images/33.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row most_popular_news">
+				<div class="col-md-9" style="border-right: 1px solid silver;">
+					<div style="padding-top: 10px; border-top: 4px double #000;">
+						<div class="row">
+							<div class="col-md-12 title_2">
+								<a href="#"><span>Most Popular &gt;</span></a>
+							</div>
+							<div class="col-md-3 main_content_11">
+								<img class="img-responsive main_content_1" src="images/34.jpg" alt="">
+								<a href="#">
+									<h4>Can You Answer the 10 Hardest Questions
+										on the U.S. Citizenship Test?</h4>
+								</a>
+								<p>Thousands of people will become American citizens around Independence
+									Day. But first they had to pass a citizenship test. Could you do the same?</p>
+								<span>U.S. 5h ago</span>
+							</div>
+							<div class="col-md-3 main_content_11">
+								<img class="img-responsive main_content_1" src="images/38.jpg" alt="">
+								<a href="#">
+									<h4>10 Medical Myths We Should Stop Believing</h4>
+								</a>
+								<p>Researchers identified nearly 400 medical practices and theories that
+									were contradicted by regorous studies. Here are some of the most notable findings.
+								</p>
+								<span>Health July 4 659 comments</span>
+							</div>
+							<div class="col-md-3 main_content_11">
+								<img class="img-responsive main_content_1" src="images/37.jpg" alt="">
+								<a href="#">
+									<h4>Trump, Flanked by Tanks, Call for Unity at Fourth of July Event</h4>
+								</a>
+								<p>The president began with a rare call for unity in his 45-minute speech,
+									but mostly spent time recounting the history of the armed forces, planes punctuating
+									his message.</p>
+								<span>Politics 43m ago</span>
+							</div>
+							<div class="col-md-3 main_content_11">
+								<img class="img-responsive main_content_1" src="images/36.jpg" alt="">
+								<a href="#">
+									<h4>Short One Star, U.S. Women Just Called for Another</h4>
+								</a>
+								<p>When Megan Rapinoe was forced to miss a World Cup semifinal,
+									the United States didn't miss a beat.</p>
+								<span>Sports 5h ago</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div style="border-top: 4px double #000; padding-top: 10px;">
+						<div class="row">
+							<div class="col-md-12 title_2">
+								<a href="#"><span>Play &gt;</span></a>
+							</div>
+						</div>
+						<div style="border-bottom: 1px solid silver; padding-bottom: 10px;">
+							<div class="row">
+								<div class="col-md-12 main_content_12">
+									<img src="images/35.jpg" alt="">
+									<a href="#">
+										<h4>Try Tiles</h4>
+									</a>
+									<p>Take a break from the daily grind with our newest game. Match tile
+										elements to keep your chain going.</p>
+								</div>
+							</div>
+						</div>
+						<div style="padding-top: 10px;">
+							<div class="row">
+								<div class="col-md-12 main_content_12">
+									<a href="#">
+										<h4>The Crossword, the Mini, Spelling Bee and More</h4>
+									</a>
+									<p>Solve the daily puzzle edited by Will Shortz, or try our
 										new word games Spelling Bee and Letter Boxed.</p>
-									</div>
 								</div>
-							</div>	
-						</div>
-					</div>
-				</div>
-				<div class="row news">
-					<div class="col-md-12" style="padding-top: 10px; padding-bottom: 10px;">
-						<span class="title">news</span>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">World News</span>
-							<img class="img-responsive main_content_1" src="images/70.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>in his own words: iran's foreign minister, mohammed javad zarif</p>
-							<p>a clash of Worldviews as Pope Francis and Putin Meet Again</p>
-							<p>gibraltar detains syria-bound tanker thought to be carrying iranian oil</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">U.S. News</span>
-							<img class="img-responsive main_content_1" src="images/71.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>ordered deported, then sent a $497,777 Bill From ICE</p>
-							<p>can you answer the 10 hardest questions on the U.S. citizenship test?</p>
-							<p>6.4-magnitude earthquake and aftershocks rattle southern california</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Politics</span>
-							<img class="img-responsive main_content_1" src="images/37.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>trump, flanked by tanks, calls for unity at fourth of july event</p>
-							<p>joe biden adn kamala harris bring their debate-stage fight to lowa</p>
-							<p>two americas, celebrating separately in one place</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">New York</span>
-							<img class="img-responsive main_content_1" src="images/72.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>the shocking final count in the Queens D.A. Race: What Happened</p>
-							<p>pyrotechnics work in secret in the desert. then the fireworks begin.</p>
-							<p>a #MeToo episode from 1969 casts a long shadow for a folk legend</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Business</span>
-							<img class="img-responsive main_content_1" src="images/73.jpg" alt="">
-						</div>
-						<div>
-							<p>beverage companies embrace recycling, until it costs them</p>
-							<p>presidential debate under its belt, telemundo enters 2020 spotlight</p>
-							<p>'wolf of wall street' producer riza aziz, is charged in malaysia fund scandal</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Technology</span>
-							<img class="img-responsive main_content_1" src="images/67.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>how to combat online 'fingerprinting'</p>
-							<p>broadcom said to be in talks to buy symantec, the security software maker</p>
-							<p>china puts app on tourists' phones in a surveillance dragnet</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Science</span>
-							<img class="img-responsive main_content_1" src="images/30.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>new weapons against cancer: millions of bacteria programmed to kill</p>
-							<p>DNA begins to unlock secrets of the ancient philistines</p>
-							<p>stored in sysnapses: how scientists completed a map of the roundworm's brain</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Sports</span>
-							<img class="img-responsive main_content_1" src="images/68.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>after 5,060 straight yankees games, a day off for john sterling</p>
-							<p>rafael nadal doesn't fall for nick kyrgios's bag of tricks</p>
-							<p>wimbledon 2019: serena williams escapes; angelique kerber doesn't</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Obituaries</span>
-							<img class="img-responsive main_content_1" src="images/69.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>arte johnson, 'very interesting' comic actor, dies at 90</p>
-							<p>spiro malas, dependable bass and a 'most happy fella,' dies at 86</p>
-							<p>robert levine, who studied kindness, identity and time, dies at 73</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">The Upshot</span>
-							<img class="img-responsive main_content_1" src="images/18.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>interest rates keep falling, befuddling the experts</p>
-							<p>some democrats talk about cosmetic surgery insurance. it doesn't exist.</p>
-							<p>which online polls are the most reliable?</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Climate and Environment</span>
-							<img class="img-responsive main_content_1" src="images/65.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>heat wave nudged the planet to its hottest june, european forecasters say</p>
-							<p>melting greenland is awash in sand</p>
-							<p>climate change denialists dubbed auto makers the 'opposition' in fight over trump's emissions rollback</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Education</span>
-							<img class="img-responsive main_content_1" src="images/66.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>deVos Repeals obama-era rule cracking down on for-profit colleges</p>
-							<p>90% of this scholl's graduates go to college. imagine if it had electricity.</p>
-							<p>canceling student debt doesn't make problems disapear</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Health</span>
-							<img class="img-responsive main_content_1" src="images/63.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>what would giving health care to undocumented immigrants mean?</p>
-							<p>new weapons against cancer: millions of bacteria programmed to kill</p>
-							<p>the zika virus is still a threat. here's what experts know.</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Reader Center</span>
-							<img class="img-responsive main_content_1" src="images/64.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>a job 'unlike any other': maggie haberman on covering president trump</p>
-							<p>'just the right amout of scary': kids review 'toy story 4'</p>
-							<p>'i will vote for any candidate on this stage tonight': readers reflect on the democratic debates</p>
-						</div>
-					</div>
-				</div>
-				<div class="row opinion">
-					<div class="col-md-12" style="padding-top: 10px; padding-bottom: 10px;">
-						<span class="title">opinion</span>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Opinion</span>
-							<img class="img-responsive main_content_1" src="images/58.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>trump is losing his trade wars</p>
-							<p>my kids are lucky to be growing up in america</p>
-							<p>will gen-z save the world?</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Op-Ed Columnists</span>
-							<img class="img-responsive main_content_1" src="images/59.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>will gen-z save the world?</p>
-							<p>trump is losing his trade wars</p>
-							<p>the democrats' leftward move</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Editorials</span>
-							<img class="img-responsive main_content_1" src="images/60.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>a movement, and a country, torn by protests</p>
-							<p>america the beautiful</p>
-							<p>the trump team is still trying to rig the census</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Contributors</span>
-							<img class="img-responsive main_content_1" src="images/61.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>op-art: U.S.A.! U.S.A.! U.S.A.?</p>
-							<p>how to straighten out the medicare maze</p>
-							<p>how the catholic church lost italy</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Sunday Review</span>
-							<img class="img-responsive main_content_1" src="images/62.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>stop calling politics our new religion</p>
-							<p>why trump likes tanks</p>
-							<p>why detention centers remind us of one of the worst periods in history</p>
-						</div>
-					</div>
-				</div>
-				<div class="row arts">
-					<div class="col-md-12" style="padding-top: 10px; padding-bottom: 10px;">
-						<span class="title">arts</span>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Arts</span>
-							<img class="img-responsive main_content_1" src="images/57.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>where do you find gay pride when it's no longer on sale?</p>
-							<p>the moon sits for its portrait</p>
-							<p>as BTS's reach expands, an army of dedicated k-pop translators grows</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Art & Design</span>
-							<img class="img-responsive main_content_1" src="images/55.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>the moon sits for its portrait</p>
-							<p>uncovering the soul of the 'black is beautiful' movement</p>
-							<p>the female gaze behind life magazine</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Movies</span>
-							<video style="width: 100%;max-height: 145.5px;">
-								<source src="https://vp.nyt.com/video/2019/07/02/81546_1_07black-auteurs-video_wg_720p.mp4" type="video/mp4">
-							</video>
-						</div>
-						<div class="sub_content">
-							<p>the moon sits for its portrait</p>
-							<p>uncovering the soul of the 'black is beautiful' movement</p>
-							<p>the female gaze behind life magazine</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span style="font-weight: bold; color: #000;">Television</span>
-							<img class="img-responsive main_content_1" src="images/56.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>review: it's 1985, and 'stranger things' hits the mall</p>
-							<p>'stranger things 3': a guide to the major pop culture references</p>
-							<p>'stranger things': mrs. wheeler and billy pick up where they left off</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Music</span>
-							<img class="img-responsive main_content_1" src="images/52.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>shrink an orchestra to a single piano, keeping the magic</p>
-							<p>kidz bop is a juggernaut. can it survive the streaming era?</p>
-							<p>taylor vs. scooter: the pop music civil war of 2019</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Theater</span>
-							<img class="img-responsive main_content_1" src="images/51.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>david cale has a new story to tell: his own</p>
-							<p>writers from idris elba play say they were erased</p>
-							<p>her kind of comedy: lewd, vulnerable and self-aware</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Dance</span>
-							<img class="img-responsive main_content_1" src="images/54.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>savion glover, listening to the sound of his own searching</p>
-							<p>for ronald k. Brown, 'grace' endures and brings 'mercy'</p>
-							<p>at the river to river festival, the art of slowing down</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Books</span>
-							<img class="img-responsive main_content_1" src="images/50.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>a TV critic who has seen the small screen become huge</p>
-							<p>review: in very short stories, a major writer celebrates stalled lives</p>
-							<p>'i was done with all the silences': how an academic got personal in 'notes to self'</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Book Review</span>
-							<img class="img-responsive main_content_1" src="images/53.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>the book lover's guide to summer</p>
-							<p>review: a C.E.O. candidate abuses women. in this thriller, they fight back.</p>
-							<p>'had i catfished my wife?': a debut midlife-crisis memoir</p>
-						</div>
-					</div>
-				</div>
-				<div class="row living">
-					<div class="col-md-12" style="padding-top: 10px; padding-bottom: 10px;">
-						<span class="title">living</span>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Style</span>
-							<img class="img-responsive main_content_1" src="images/46.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>do americans need air-conditioning?</p>
-							<p>the horrible place between the apps</p>
-							<p>at valentino, diversity by design</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Food</span>
-							<img class="img-responsive main_content_1" src="images/48.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>celebrating america, scoop by frosty scoop</p>
-							<p>naughty name, virtuous menu and a line down the block</p>
-							<p>our best fourth of july recipes</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Smarter Living</span>
-							<img class="img-responsive main_content_1" src="images/45.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>how to be happy</p>
-							<p>a shortcut to packing your suitcase the right way</p>
-							<p>'guilty' pleasures? no such thing</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">The New York Times Magazine</span>
-							<img class="img-responsive main_content_1" src="images/44.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>how electronic monitoring drives defendants into debt</p>
-							<p>forget the pork. add some flower power to your quesadillas.</p>
-							<p>routine testing for life insurance turns up potential liver porblems</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">T Magazine</span>
-							<img class="img-responsive main_content_1" src="images/47.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>the best of couture week, in pictures</p>
-							<p>a whimsical provincetown home, where everything is a treasure</p>
-							<p>daniel roseberry's schiaparelli debut</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Travel</span>
-							<img class="img-responsive main_content_1" src="images/40.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>'filters off!' chasing the total solar eclipse in chile</p>
-							<p>how sonoma's vineyards survived a siege of fire, smoke and ash</p>
-							<p>have work, will travel</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Love</span>
-							<img class="img-responsive main_content_1" src="images/41.gif" alt="">
-						</div>
-						<div class="sub_content">
-							<p>tips for building a wedding website</p>
-							<p>should we all take the slow road to love?</p>
-							<p>for a 'saturday night live' writer, a permanent musical guest</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-4 contents">
-						<div>
-							<span class="title_3">Real Estate</span>
-							<img class="img-responsive main_content_1" src="images/42.jpg" alt="">
-						</div>
-						<div class="sub_content">
-							<p>$5.5 million homes in new york, illinois and missouri</p>
-							<p>house hungting in ...st. barts</p>
-							<p>ho-ho-kus, N.J.: a tight-knit but welcoming community</p>
-							<p>search for homes for sale or rent</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<footer>
-			<div class="container-fluid">
-				<div class="row footer_pc hidden-xs hidden-sm">
-					<div class="col-md-12">
-						<div class="row about">
-							<div class="col-md-12">
-								<a href="#"><img class="img-responsive logo_footer" src="images/logo.svg" alt=""></a>
-							</div>
-							<div class="col-md-2">
-								<span class="about_title">news</span>
-								<a href="#">Home Page</a>
-								<a href="#">World</a>
-								<a href="#">U.S.</a>
-								<a href="#">Politics</a>
-								<a href="#">Election 2020</a>
-								<a href="#">New York</a>
-								<a href="#">Business</a>
-								<a href="#">Tech</a>
-								<a href="#">Science</a>
-								<a href="#">Sports</a>
-								<a href="#">Obituaries</a>
-								<a href="#">Today's Paper</a>
-								<a href="#">Corrections</a>
-							</div>
-							<div class="col-md-2">
-								<span class="about_title">opinion</span>
-								<a href="#">Today's Opinion</a>
-								<a href="#">Op-Ed Columnists</a>
-								<a href="#">Editorials</a>
-								<a href="#">Op-Ed Contributors</a>
-								<a href="#">Letters</a>
-								<a href="#">Sunday Review</a>
-								<a href="#">Video: Opinion</a>
-							</div>
-							<div class="col-md-2">
-								<span class="about_title">arts</span>
-								<a href="#">Today's Arts</a>
-								<a href="#">Art & Design</a>
-								<a href="#">Books</a>
-								<a href="#">Dance</a>
-								<a href="#">Movies</a>
-								<a href="#">Music</a>
-								<a href="#">Pop Culture</a>
-								<a href="#">Television</a>
-								<a href="#">Theater</a>
-								<a href="#">Video: Arts</a>
-							</div>
-							<div class="col-md-2">
-								<span class="about_title">living</span>
-								<a href="#">Automobiles</a>
+			<div class="row news">
+				<div class="col-md-12" style="padding-top: 10px; padding-bottom: 10px;">
+					<span class="title">news</span>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">World News</span>
+						<img class="img-responsive main_content_1" src="images/70.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>in his own words: iran's foreign minister, mohammed javad zarif</p>
+						<p>a clash of Worldviews as Pope Francis and Putin Meet Again</p>
+						<p>gibraltar detains syria-bound tanker thought to be carrying iranian oil</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">U.S. News</span>
+						<img class="img-responsive main_content_1" src="images/71.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>ordered deported, then sent a $497,777 Bill From ICE</p>
+						<p>can you answer the 10 hardest questions on the U.S. citizenship test?</p>
+						<p>6.4-magnitude earthquake and aftershocks rattle southern california</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Politics</span>
+						<img class="img-responsive main_content_1" src="images/37.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>trump, flanked by tanks, calls for unity at fourth of july event</p>
+						<p>joe biden adn kamala harris bring their debate-stage fight to lowa</p>
+						<p>two americas, celebrating separately in one place</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">New York</span>
+						<img class="img-responsive main_content_1" src="images/72.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>the shocking final count in the Queens D.A. Race: What Happened</p>
+						<p>pyrotechnics work in secret in the desert. then the fireworks begin.</p>
+						<p>a #MeToo episode from 1969 casts a long shadow for a folk legend</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Business</span>
+						<img class="img-responsive main_content_1" src="images/73.jpg" alt="">
+					</div>
+					<div>
+						<p>beverage companies embrace recycling, until it costs them</p>
+						<p>presidential debate under its belt, telemundo enters 2020 spotlight</p>
+						<p>'wolf of wall street' producer riza aziz, is charged in malaysia fund scandal</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Technology</span>
+						<img class="img-responsive main_content_1" src="images/67.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>how to combat online 'fingerprinting'</p>
+						<p>broadcom said to be in talks to buy symantec, the security software maker</p>
+						<p>china puts app on tourists' phones in a surveillance dragnet</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Science</span>
+						<img class="img-responsive main_content_1" src="images/30.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>new weapons against cancer: millions of bacteria programmed to kill</p>
+						<p>DNA begins to unlock secrets of the ancient philistines</p>
+						<p>stored in sysnapses: how scientists completed a map of the roundworm's brain</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Sports</span>
+						<img class="img-responsive main_content_1" src="images/68.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>after 5,060 straight yankees games, a day off for john sterling</p>
+						<p>rafael nadal doesn't fall for nick kyrgios's bag of tricks</p>
+						<p>wimbledon 2019: serena williams escapes; angelique kerber doesn't</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Obituaries</span>
+						<img class="img-responsive main_content_1" src="images/69.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>arte johnson, 'very interesting' comic actor, dies at 90</p>
+						<p>spiro malas, dependable bass and a 'most happy fella,' dies at 86</p>
+						<p>robert levine, who studied kindness, identity and time, dies at 73</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">The Upshot</span>
+						<img class="img-responsive main_content_1" src="images/18.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>interest rates keep falling, befuddling the experts</p>
+						<p>some democrats talk about cosmetic surgery insurance. it doesn't exist.</p>
+						<p>which online polls are the most reliable?</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Climate and Environment</span>
+						<img class="img-responsive main_content_1" src="images/65.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>heat wave nudged the planet to its hottest june, european forecasters say</p>
+						<p>melting greenland is awash in sand</p>
+						<p>climate change denialists dubbed auto makers the 'opposition' in fight over trump's emissions
+							rollback</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Education</span>
+						<img class="img-responsive main_content_1" src="images/66.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>deVos Repeals obama-era rule cracking down on for-profit colleges</p>
+						<p>90% of this scholl's graduates go to college. imagine if it had electricity.</p>
+						<p>canceling student debt doesn't make problems disapear</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Health</span>
+						<img class="img-responsive main_content_1" src="images/63.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>what would giving health care to undocumented immigrants mean?</p>
+						<p>new weapons against cancer: millions of bacteria programmed to kill</p>
+						<p>the zika virus is still a threat. here's what experts know.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Reader Center</span>
+						<img class="img-responsive main_content_1" src="images/64.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>a job 'unlike any other': maggie haberman on covering president trump</p>
+						<p>'just the right amout of scary': kids review 'toy story 4'</p>
+						<p>'i will vote for any candidate on this stage tonight': readers reflect on the democratic
+							debates</p>
+					</div>
+				</div>
+			</div>
+			<div class="row opinion">
+				<div class="col-md-12" style="padding-top: 10px; padding-bottom: 10px;">
+					<span class="title">opinion</span>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Opinion</span>
+						<img class="img-responsive main_content_1" src="images/58.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>trump is losing his trade wars</p>
+						<p>my kids are lucky to be growing up in america</p>
+						<p>will gen-z save the world?</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Op-Ed Columnists</span>
+						<img class="img-responsive main_content_1" src="images/59.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>will gen-z save the world?</p>
+						<p>trump is losing his trade wars</p>
+						<p>the democrats' leftward move</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Editorials</span>
+						<img class="img-responsive main_content_1" src="images/60.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>a movement, and a country, torn by protests</p>
+						<p>america the beautiful</p>
+						<p>the trump team is still trying to rig the census</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Contributors</span>
+						<img class="img-responsive main_content_1" src="images/61.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>op-art: U.S.A.! U.S.A.! U.S.A.?</p>
+						<p>how to straighten out the medicare maze</p>
+						<p>how the catholic church lost italy</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Sunday Review</span>
+						<img class="img-responsive main_content_1" src="images/62.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>stop calling politics our new religion</p>
+						<p>why trump likes tanks</p>
+						<p>why detention centers remind us of one of the worst periods in history</p>
+					</div>
+				</div>
+			</div>
+			<div class="row arts">
+				<div class="col-md-12" style="padding-top: 10px; padding-bottom: 10px;">
+					<span class="title">arts</span>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Arts</span>
+						<img class="img-responsive main_content_1" src="images/57.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>where do you find gay pride when it's no longer on sale?</p>
+						<p>the moon sits for its portrait</p>
+						<p>as BTS's reach expands, an army of dedicated k-pop translators grows</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Art & Design</span>
+						<img class="img-responsive main_content_1" src="images/55.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>the moon sits for its portrait</p>
+						<p>uncovering the soul of the 'black is beautiful' movement</p>
+						<p>the female gaze behind life magazine</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Movies</span>
+						<video style="width: 100%;max-height: 145.5px;">
+							<source src="https://vp.nyt.com/video/2019/07/02/81546_1_07black-auteurs-video_wg_720p.mp4"
+								type="video/mp4">
+						</video>
+					</div>
+					<div class="sub_content">
+						<p>the moon sits for its portrait</p>
+						<p>uncovering the soul of the 'black is beautiful' movement</p>
+						<p>the female gaze behind life magazine</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span style="font-weight: bold; color: #000;">Television</span>
+						<img class="img-responsive main_content_1" src="images/56.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>review: it's 1985, and 'stranger things' hits the mall</p>
+						<p>'stranger things 3': a guide to the major pop culture references</p>
+						<p>'stranger things': mrs. wheeler and billy pick up where they left off</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Music</span>
+						<img class="img-responsive main_content_1" src="images/52.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>shrink an orchestra to a single piano, keeping the magic</p>
+						<p>kidz bop is a juggernaut. can it survive the streaming era?</p>
+						<p>taylor vs. scooter: the pop music civil war of 2019</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Theater</span>
+						<img class="img-responsive main_content_1" src="images/51.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>david cale has a new story to tell: his own</p>
+						<p>writers from idris elba play say they were erased</p>
+						<p>her kind of comedy: lewd, vulnerable and self-aware</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Dance</span>
+						<img class="img-responsive main_content_1" src="images/54.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>savion glover, listening to the sound of his own searching</p>
+						<p>for ronald k. Brown, 'grace' endures and brings 'mercy'</p>
+						<p>at the river to river festival, the art of slowing down</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Books</span>
+						<img class="img-responsive main_content_1" src="images/50.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>a TV critic who has seen the small screen become huge</p>
+						<p>review: in very short stories, a major writer celebrates stalled lives</p>
+						<p>'i was done with all the silences': how an academic got personal in 'notes to self'</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Book Review</span>
+						<img class="img-responsive main_content_1" src="images/53.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>the book lover's guide to summer</p>
+						<p>review: a C.E.O. candidate abuses women. in this thriller, they fight back.</p>
+						<p>'had i catfished my wife?': a debut midlife-crisis memoir</p>
+					</div>
+				</div>
+			</div>
+			<div class="row living">
+				<div class="col-md-12" style="padding-top: 10px; padding-bottom: 10px;">
+					<span class="title">living</span>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Style</span>
+						<img class="img-responsive main_content_1" src="images/46.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>do americans need air-conditioning?</p>
+						<p>the horrible place between the apps</p>
+						<p>at valentino, diversity by design</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Food</span>
+						<img class="img-responsive main_content_1" src="images/48.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>celebrating america, scoop by frosty scoop</p>
+						<p>naughty name, virtuous menu and a line down the block</p>
+						<p>our best fourth of july recipes</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Smarter Living</span>
+						<img class="img-responsive main_content_1" src="images/45.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>how to be happy</p>
+						<p>a shortcut to packing your suitcase the right way</p>
+						<p>'guilty' pleasures? no such thing</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">The New York Times Magazine</span>
+						<img class="img-responsive main_content_1" src="images/44.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>how electronic monitoring drives defendants into debt</p>
+						<p>forget the pork. add some flower power to your quesadillas.</p>
+						<p>routine testing for life insurance turns up potential liver porblems</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">T Magazine</span>
+						<img class="img-responsive main_content_1" src="images/47.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>the best of couture week, in pictures</p>
+						<p>a whimsical provincetown home, where everything is a treasure</p>
+						<p>daniel roseberry's schiaparelli debut</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Travel</span>
+						<img class="img-responsive main_content_1" src="images/40.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>'filters off!' chasing the total solar eclipse in chile</p>
+						<p>how sonoma's vineyards survived a siege of fire, smoke and ash</p>
+						<p>have work, will travel</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Love</span>
+						<img class="img-responsive main_content_1" src="images/41.gif" alt="">
+					</div>
+					<div class="sub_content">
+						<p>tips for building a wedding website</p>
+						<p>should we all take the slow road to love?</p>
+						<p>for a 'saturday night live' writer, a permanent musical guest</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 contents">
+					<div>
+						<span class="title_3">Real Estate</span>
+						<img class="img-responsive main_content_1" src="images/42.jpg" alt="">
+					</div>
+					<div class="sub_content">
+						<p>$5.5 million homes in new york, illinois and missouri</p>
+						<p>house hungting in ...st. barts</p>
+						<p>ho-ho-kus, N.J.: a tight-knit but welcoming community</p>
+						<p>search for homes for sale or rent</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container-fluid">
+			<div class="row footer_pc hidden-xs hidden-sm">
+				<div class="col-md-12">
+					<div class="row about">
+						<div class="col-md-12">
+							<a href="#"><img class="img-responsive logo_footer" src="images/logo.svg" alt=""></a>
+						</div>
+						<div class="col-md-2">
+							<span class="about_title">news</span>
+							<a href="#">Home Page</a>
+							<a href="#">World</a>
+							<a href="#">U.S.</a>
+							<a href="#">Politics</a>
+							<a href="#">Election 2020</a>
+							<a href="#">New York</a>
+							<a href="#">Business</a>
+							<a href="#">Tech</a>
+							<a href="#">Science</a>
+							<a href="#">Sports</a>
+							<a href="#">Obituaries</a>
+							<a href="#">Today's Paper</a>
+							<a href="#">Corrections</a>
+						</div>
+						<div class="col-md-2">
+							<span class="about_title">opinion</span>
+							<a href="#">Today's Opinion</a>
+							<a href="#">Op-Ed Columnists</a>
+							<a href="#">Editorials</a>
+							<a href="#">Op-Ed Contributors</a>
+							<a href="#">Letters</a>
+							<a href="#">Sunday Review</a>
+							<a href="#">Video: Opinion</a>
+						</div>
+						<div class="col-md-2">
+							<span class="about_title">arts</span>
+							<a href="#">Today's Arts</a>
+							<a href="#">Art & Design</a>
+							<a href="#">Books</a>
+							<a href="#">Dance</a>
+							<a href="#">Movies</a>
+							<a href="#">Music</a>
+							<a href="#">Pop Culture</a>
+							<a href="#">Television</a>
+							<a href="#">Theater</a>
+							<a href="#">Video: Arts</a>
+						</div>
+						<div class="col-md-2">
+							<span class="about_title">living</span>
+							<a href="#">Automobiles</a>
+							<a href="#">Crossword</a>
+							<a href="#">Education</a>
+							<a href="#">Food</a>
+							<a href="#">Health</a>
+							<a href="#">Jobs</a>
+							<a href="#">Magazine</a>
+							<a href="#">Parenting</a>
+							<a href="#">Real Estate</a>
+							<a href="#">Style</a>
+							<a href="#">T Magazine</a>
+							<a href="#">Travel</a>
+							<a href="#">Love</a>
+						</div>
+						<div class="col-md-2 more">
+							<span class="about_title">more</span>
+							<a href="#">Reader Center</a>
+							<a href="#">Wirecutter</a>
+							<a href="#">Live Events</a>
+							<a href="#">The Learning Network</a>
+							<a href="#">Tools & Services</a>
+							<a href="#">N.Y.C. Events Guide</a>
+							<a href="#">Multimedia</a>
+							<a href="#">Potography</a>
+							<a href="#">Video</a>
+							<a href="#">Newsletters</a>
+							<a href="#">NYT Store</a>
+							<a href="#">Times Journeys</a>
+							<a href="#">Manage My Account</a>
+						</div>
+						<div class="col-md-2">
+							<div class="subscribe" style="padding-bottom: 10px; border-bottom: 1px solid silver;">
+								<span class="about_title">subscribe</span>
+								<a href="#">Home Delivery</a>
+								<a href="#">Digital Subscriptions</a>
 								<a href="#">Crossword</a>
-								<a href="#">Education</a>
-								<a href="#">Food</a>
-								<a href="#">Health</a>
-								<a href="#">Jobs</a>
-								<a href="#">Magazine</a>
-								<a href="#">Parenting</a>
-								<a href="#">Real Estate</a>
-								<a href="#">Style</a>
-								<a href="#">T Magazine</a>
-								<a href="#">Travel</a>
-								<a href="#">Love</a>
-							</div>
-							<div class="col-md-2 more">
-								<span class="about_title">more</span>
-								<a href="#">Reader Center</a>
-								<a href="#">Wirecutter</a>
-								<a href="#">Live Events</a>
-								<a href="#">The Learning Network</a>
-								<a href="#">Tools & Services</a>
-								<a href="#">N.Y.C. Events Guide</a>
-								<a href="#">Multimedia</a>
-								<a href="#">Potography</a>
-								<a href="#">Video</a>
-								<a href="#">Newsletters</a>
-								<a href="#">NYT Store</a>
-								<a href="#">Times Journeys</a>
-								<a href="#">Manage My Account</a>
-							</div>
-							<div class="col-md-2">
-								<div class="subscribe" style="padding-bottom: 10px; border-bottom: 1px solid silver;">
-									<span class="about_title">subscribe</span>
-									<a href="#">Home Delivery</a>
-									<a href="#">Digital Subscriptions</a>
-									<a href="#">Crossword</a>
-									<a href="#" style="margin-bottom: 10px;">Cooking</a>
-									<div class="contents_subscribe">
-										<a href="#">Email Newsletters</a>
-										<a href="#">Corporate Subscriptions</a>
-										<a href="#">Education Rate</a>
-									</div>
+								<a href="#" style="margin-bottom: 10px;">Cooking</a>
+								<div class="contents_subscribe">
+									<a href="#">Email Newsletters</a>
+									<a href="#">Corporate Subscriptions</a>
+									<a href="#">Education Rate</a>
 								</div>
-								<div class="contents_subscribe" style="padding-top: 10px;">
-									<a href="#">Mobile Applications</a>
-									<a href="#">Replica Edition</a>
-								</div>
+							</div>
+							<div class="contents_subscribe" style="padding-top: 10px;">
+								<a href="#">Mobile Applications</a>
+								<a href="#">Replica Edition</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row footer_mobile visible-xs visible-sm">
-					<button data-toggle="collapse" data-target="#news">news</button>
-					<div id="news" class="collapse">
-						<a href="#">Home Page</a>
-						<a href="#">World</a>
-						<a href="#">U.S.</a>
-						<a href="#">Politics</a>
-						<a href="#">Election 2020</a>
-						<a href="#">New York</a>
-						<a href="#">Business</a>
-						<a href="#">Tech</a>
-						<a href="#">Science</a>
-						<a href="#">Sports</a>
-						<a href="#">Obituaries</a>
-						<a href="#">Today's Paper</a>
-						<a href="#">Corrections</a>
-					</div>
-					<button data-toggle="collapse" data-target="#opinion">opinion</button>
-					<div id="opinion" class="collapse">
-						<a href="#">Today's Opinion</a>
-						<a href="#">Op-Ed Columnists</a>
-						<a href="#">Editorials</a>
-						<a href="#">Op-Ed Contributors</a>
-						<a href="#">Letters</a>
-						<a href="#">Sunday Review</a>
-						<a href="#">Video: Opinion</a>
-					</div>
-					<button data-toggle="collapse" data-target="#arts">arts</button>
-					<div id="arts" class="collapse">
-						<a href="#">Today's Arts</a>
-						<a href="#">Art & Design</a>
-						<a href="#">Books</a>
-						<a href="#">Dance</a>
-						<a href="#">Movies</a>
-						<a href="#">Music</a>
-						<a href="#">Pop Culture</a>
-						<a href="#">Television</a>
-						<a href="#">Theater</a>
-						<a href="#">Video: Arts</a>
-					</div>	
-					<button data-toggle="collapse" data-target="#living">living</button>
-					<div id="living" class="collapse">
-						<a href="#">Automobiles</a>
-						<a href="#">Crossword</a>
-						<a href="#">Education</a>
-						<a href="#">Food</a>
-						<a href="#">Health</a>
-						<a href="#">Jobs</a>
-						<a href="#">Magazine</a>
-						<a href="#">Parenting</a>
-						<a href="#">Real Estate</a>
-						<a href="#">Style</a>
-						<a href="#">T Magazine</a>
-						<a href="#">Travel</a>
-						<a href="#">Love</a>
-					</div>
-					<button data-toggle="collapse" data-target="#more">listings & more</button>
-					<div id="more" class="collapse">	
-						<a href="#">Reader Center</a>
-						<a href="#">Wirecutter</a>
-						<a href="#">Live Events</a>
-						<a href="#">The Learning Network</a>
-						<a href="#">Tools & Services</a>
-						<a href="#">N.Y.C. Events Guide</a>
-						<a href="#">Multimedia</a>
-						<a href="#">Potography</a>
-						<a href="#">Video</a>
-						<a href="#">Newsletters</a>
-						<a href="#">NYT Store</a>
-						<a href="#">Times Journeys</a>
-						<a href="#">Manage My Account</a>
-					</div>	
+			</div>
+			<div class="row footer_mobile visible-xs visible-sm">
+				<button data-toggle="collapse" data-target="#news">news</button>
+				<div id="news" class="collapse">
+					<a href="#">Home Page</a>
+					<a href="#">World</a>
+					<a href="#">U.S.</a>
+					<a href="#">Politics</a>
+					<a href="#">Election 2020</a>
+					<a href="#">New York</a>
+					<a href="#">Business</a>
+					<a href="#">Tech</a>
+					<a href="#">Science</a>
+					<a href="#">Sports</a>
+					<a href="#">Obituaries</a>
+					<a href="#">Today's Paper</a>
+					<a href="#">Corrections</a>
 				</div>
-				<div class="row privacy">
-					<div class="col-xs-12 visible-xs visible-sm">
-						<span>&copy; The New York Times Company</span>
-					</div>
-					<div class="col-md-12 contents_privacy">
-						<span class="hidden-xs hidden-sm" style="color: #999;">&copy; The New York Times Company</span>
-						<a href="#">Contact Us</a>
-						<a href="#">Work with us</a>
-						<a href="#">Advertise</a>
-						<a href="#">Your Ad Choices</a>
-						<a href="#">Privacy</a>
-						<a href="#">Terms of Service</a>
-						<a href="#">Site Map</a>
-						<a href="#">Help</a>
-						<a href="#">Subscriptions</a>
-					</div>
+				<button data-toggle="collapse" data-target="#opinion">opinion</button>
+				<div id="opinion" class="collapse">
+					<a href="#">Today's Opinion</a>
+					<a href="#">Op-Ed Columnists</a>
+					<a href="#">Editorials</a>
+					<a href="#">Op-Ed Contributors</a>
+					<a href="#">Letters</a>
+					<a href="#">Sunday Review</a>
+					<a href="#">Video: Opinion</a>
+				</div>
+				<button data-toggle="collapse" data-target="#arts">arts</button>
+				<div id="arts" class="collapse">
+					<a href="#">Today's Arts</a>
+					<a href="#">Art & Design</a>
+					<a href="#">Books</a>
+					<a href="#">Dance</a>
+					<a href="#">Movies</a>
+					<a href="#">Music</a>
+					<a href="#">Pop Culture</a>
+					<a href="#">Television</a>
+					<a href="#">Theater</a>
+					<a href="#">Video: Arts</a>
+				</div>
+				<button data-toggle="collapse" data-target="#living">living</button>
+				<div id="living" class="collapse">
+					<a href="#">Automobiles</a>
+					<a href="#">Crossword</a>
+					<a href="#">Education</a>
+					<a href="#">Food</a>
+					<a href="#">Health</a>
+					<a href="#">Jobs</a>
+					<a href="#">Magazine</a>
+					<a href="#">Parenting</a>
+					<a href="#">Real Estate</a>
+					<a href="#">Style</a>
+					<a href="#">T Magazine</a>
+					<a href="#">Travel</a>
+					<a href="#">Love</a>
+				</div>
+				<button data-toggle="collapse" data-target="#more">listings & more</button>
+				<div id="more" class="collapse">
+					<a href="#">Reader Center</a>
+					<a href="#">Wirecutter</a>
+					<a href="#">Live Events</a>
+					<a href="#">The Learning Network</a>
+					<a href="#">Tools & Services</a>
+					<a href="#">N.Y.C. Events Guide</a>
+					<a href="#">Multimedia</a>
+					<a href="#">Potography</a>
+					<a href="#">Video</a>
+					<a href="#">Newsletters</a>
+					<a href="#">NYT Store</a>
+					<a href="#">Times Journeys</a>
+					<a href="#">Manage My Account</a>
 				</div>
 			</div>
-		</footer>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="js/jquery-v3.4.1.js"></script>
-		<script type="text/javascript">
-			$(document).ready(
-				function(){
-					$("#menu_mobile").click(
-						function(){
-							if ($("#user").hasClass("fa-user")) {
-								$("#user").removeClass("fa-user");
-								$("#user").addClass("fa-times");
-								$("#bars").removeClass("fa-bars");
-								$("#menu_mobile_hidden").css("display", "block");
-							}
+			<div class="row privacy">
+				<div class="col-xs-12 visible-xs visible-sm">
+					<span>&copy; The New York Times Company</span>
+				</div>
+				<div class="col-md-12 contents_privacy">
+					<span class="hidden-xs hidden-sm" style="color: #999;">&copy; The New York Times Company</span>
+					<a href="#">Contact Us</a>
+					<a href="#">Work with us</a>
+					<a href="#">Advertise</a>
+					<a href="#">Your Ad Choices</a>
+					<a href="#">Privacy</a>
+					<a href="#">Terms of Service</a>
+					<a href="#">Site Map</a>
+					<a href="#">Help</a>
+					<a href="#">Subscriptions</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery-v3.4.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(
+			function () {
+				$("#menu_mobile").click(
+					function () {
+						if ($("#user").hasClass("fa-user")) {
+							$("#user").removeClass("fa-user");
+							$("#user").addClass("fa-times");
+							$("#bars").removeClass("fa-bars");
+							$("#menu_mobile_hidden").css("display", "block");
 						}
-					),
+					}
+				),
 					$("#account_mobile").click(
-						function(){
+						function () {
 							if ($("#user").hasClass("fa-times")) {
 								$("#user").addClass("fa-user");
 								$("#user").removeClass("fa-times");
@@ -1551,8 +1729,9 @@
 							}
 						}
 					)
-				}
-			)
-		</script>
-	</body>
+			}
+		)
+	</script>
+</body>
+
 </html>
